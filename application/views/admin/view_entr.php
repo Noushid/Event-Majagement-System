@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!doctype html>
+=======
+<<!doctype html>
+>>>>>>> f5aa64a79d3911b3bd9effa195de693dabef7527
 <html lang="en">
 <head>
     <meta charset="UTF-8">

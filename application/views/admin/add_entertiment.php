@@ -19,7 +19,7 @@
 <body>
 <div class="page-wrapper">
     <div class="left-wrapper">
-        <?php echo dashboard_menu('vehicles');?>
+        <?php echo dashboard_menu('entertinment');?>
     </div>
 
     <nav class="top-wrapper">
@@ -37,7 +37,8 @@
             </ul>
         </div>
     </nav>
-    <?php echo form_open(base_url('Entertiment_Controller/add_entr'));?>
+    <div>
+	<?php echo form_open(base_url('Entertiment_Controller/add_entr'));?>
 		<label for="Name">Name</label><input type="text" name="name">
 		<label for="Type"> Type</label><input type="text" name="type">
 		<div><button  name="button">Submit</button></div>
@@ -48,5 +49,6 @@
 
 		} ?>
     </div>
+</div>
 </body>
 </html>
