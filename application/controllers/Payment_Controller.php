@@ -28,7 +28,7 @@ class Payment_Controller extends CI_Controller
 		$this->form_validation->set_rules('email','Email','required');
 		if ($this->form_validation->run() == FALSE) 
 		{
-			$this->load->view('admin/add_vehicle');
+			$this->load->view('admin/add_payment');
 		}
 		else
 		{

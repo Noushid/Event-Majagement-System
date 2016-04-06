@@ -140,6 +140,7 @@ function dashboard_menu($current)
             'icon' => 'fa-folder',
             'link' => 'clients'
         ]
+
     ];
 
     $html = '';
@@ -170,55 +171,4 @@ function dashboard_menu($current)
 
 
 
-
-function member_menu($current)
-{
-    $menu = [
-        'home' => [
-            'title' => 'home',
-            'icon' => 'fa-tachometer',
-            'link' => 'home'
-        ],
-        'loan' => [
-            'title' => 'loan',
-            'icon' => 'fa-folder',
-            'link' => 'loan'
-        ],
-        'profile' => [
-            'title' => 'profile',
-            'icon' => 'fa-picture-o',
-            'link' => 'profile'
-        ],
-        'deposit' => [
-            'title' => 'deposit',
-            'icon' => 'fa-trophy',
-            'link' => 'deposit'
-        ]
-    ];
-
-    $html = '';
-    $html .='<nav class="sidebar-left">
-        <div class="">
-          <ul class="menu-left">
-            <li>
-              <div class="user-img">
-                <img class="img-responsive img-circle center-block" src="'.base_url().'" alt="User">
-              </div>
-              <div class="user-id text-center">
-                <span class="">Kudumbsree</span>
-              </div>
-            </li>';
-    foreach ($menu as $key => $value) {
-        if ($current == $key) {
-            $html .='<li><a href="'.base_url($_SESSION['username'].'/'.$value['link']).'" class="active">'.ucfirst($key).' &nbsp;<i class="menu-icon fa '.$value['icon'].' pull-right"></i></a></li>';
-        } else {
-            $html .='<li><a href="'.base_url($_SESSION['username'].'/'.$value['link']).'" class="">'.ucfirst($key).' &nbsp;<i class="menu-icon fa '.$value['icon'].' pull-right"></i></a></li>';
-        }
-    }
-    $html .= '</ul>
-        </div>
-      </nav>';
-    return $html;
-
-}
 
