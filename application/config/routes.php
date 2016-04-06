@@ -50,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+$route['dashboard'] = 'Dashboard/dashboard';
+
 
 $route['default_controller'] = 'welcome';
 
@@ -60,6 +62,7 @@ $route['dashboard/client/delete/(:any)'] ='Client_Controller/delete/$1';
 
 //...................admin.........
 ///category
+
 $route['add_category']= 'Category_Controller';
 $route['dashboard/category/delete/(:any)'] ='Category_Controller/delete/$1';
 $route['dashboard/category'] = 'Category_Controller/view';
@@ -69,9 +72,9 @@ $route['dashboard/category'] ='Category_Controller/view_cat';
 $route['dashboard/venue'] = 'Venue_Controller/view';
 $route['dashboard/venue/delete/(:any)'] ='Venue_Controller/delete/$1';
 //vehicle
-$route['add_vehicle'] = 'Vehicle_Controller';
+$route['dashboard/add_vehicle'] = 'Vehicle_Controller';
 $route['dashboard/vehicle/delete/(:any)'] ='Vehicle_Controller/delete/$1'; 
-$route['dashboard/vehicle'] = 'Vehicle_Controller/view';
+$route['dashboard/vehicles'] = 'Vehicle_Controller/view';
 //entertiment
 $route['add_entertiment'] = 'Entertiment_Controller';
 $route['dashboard/entertiment/delete/(:any)'] ='Entertiment_Controller/delete/$1'; 
