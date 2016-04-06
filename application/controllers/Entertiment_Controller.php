@@ -42,9 +42,9 @@ class Entertiment_Controller extends CI_Controller
 				$data['message'] = '<script type="text/javascript">
                                     var r = alert("successful!");
                                     if (r == true) {
-                                        window.location = "' . base_url('add_entertiment') . '";
+                                        window.location = "' . base_url('dashboard/entertinment') . '";
                                     } else {
-                                        window.location = "' . base_url('add_entertiment') . '";
+                                        window.location = "' . base_url('dashboard/entertinment') . '";
                                     }
                                 </script>';
                 $this->load->view('admin/add_entertiment',$data);                
@@ -52,19 +52,22 @@ class Entertiment_Controller extends CI_Controller
 
 		}
 	}
+
+
 	public function delete($id)
 	{
 		if($this->Entertiment_Model->delete_entr($id));
 		{
-			redirect(base_url('dashboard/entrtiment'));
+			redirect(base_url('dashboard/entertinment'));
 		}
-
 	}
+
+
 	public function view()
 	{
 		$data =$this->Entertiment_Model->view();
 		$this->load->library('table');
- 		$this->table->set_heading('Name',  'Type', '','');
+ 		$this->table->set_heading('Name',  'Type', anchor(base_url('dashboard/entertinment/add'),'Add',['class' => 'button normal-button']));
  		if(!empty($data))
  		{
 	 		foreach ($data as $key => $value)
@@ -104,14 +107,11 @@ class Entertiment_Controller extends CI_Controller
       	$this->table->set_template($template);	 		
 		$data['data'] = $this->table->generate();
  		
- 	}
+ 	} else {
+            $data['message'] = 'No data Found
+                                    <a href="'.base_url('dashboard/entertinment/add').'">add</a>';
+        }
 		$this->load->view('admin/view_entr',$data);
 	}
 }
 
-
-
-
-
- ?>
-}

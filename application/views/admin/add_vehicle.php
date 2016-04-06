@@ -6,7 +6,7 @@
     <meta name="description" content="Psybo technologies is a small web design &amp; development agency based in Manjeri, Malappuram, INDIA. We've made a reputation for building websites that look great and are easy-to-use.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php echo base_url('admin/img/ico.png');?>" type="image/png" sizes="47x54">
-    <title><?php echo ucfirst($currentPage); ?> Kudumba sree</title>
+    <title>Event Management System</title>
     <link rel="stylesheet" href="<?php echo base_url('admin/css/styleapp.css');?>">
     <script type="text/javascript" src="<?php echo base_url('admin/js/appjs.js');?>"></script>
     <style>
@@ -40,14 +40,17 @@
 
     <div>
         <?php echo form_open(base_url('Vehicle_Controller/add_vehilcle'));?>
+
         <label for="name">Name</label>
-        <input type="text" name="name"><br>
+            <input type="text" name="name"><br>
+        <label for="name">Type</label>
+            <input type="text" name="type"><br>
         <label for="reg_no">Register No</label>
-        <input type="text" name="reg_no"><br>
+            <input type="text" name="reg_no"><br>
         <label for="seat">Seat</label>
-        <input type="text" name="seat"><br>
+            <input type="text" name="seat"><br>
         <label for="price">Price</label>
-        <input type="text" name="price"><br>
+            <input type="text" name="price"><br>
         <div><button  name="button">Submit</button></div>
         <?php echo form_close() ?>
         <?php if(isset($message))

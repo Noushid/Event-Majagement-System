@@ -24,8 +24,9 @@ class Vehicle_Controller extends CI_Controller
 	public function add_vehilcle()
 	{
 		$this->form_validation->set_rules('name','Name','required');
-		$this->form_validation->set_rules('reg_no','Register No','required');
-		$this->form_validation->set_rules('seat','Seat','required');
+        $this->form_validation->set_rules('type','typeNo','required');
+        $this->form_validation->set_rules('reg_no','Register No','required');
+		$this->form_validation->set_rules('seat','Seat','xss_clean');
 		$this->form_validation->set_rules('price','Price','required');
 		if ($this->form_validation->run() == FALSE) 
 		{
@@ -33,12 +34,14 @@ class Vehicle_Controller extends CI_Controller
 		}
 		else
 		{
-			$name = $this->input->post('name');
+            $name = $this->input->post('name');
+            $type = $this->input->post('type');
 			$reg_no =$this->input->post('reg_no');
 			$seat = $this->input->post('seat');
 			$price = $this->input->post('price');
 			$data =[
 						'name'=>$name,
+						'type'=>$type,
 						'reg_no'=>$reg_no,
 						'seat' =>$seat,
 						'price'=>$price,
@@ -49,9 +52,9 @@ class Vehicle_Controller extends CI_Controller
 				$data['message'] = '<script type="text/javascript">
                                     var r = alert("successful!");
                                     if (r == true) {
-                                        window.location = "' . base_url('add_vehicle') . '";
+                                        window.location = "' . base_url('dashboard/vehicles') . '";
                                     } else {
-                                        window.location = "' . base_url('add_vehicle') . '";
+                                        window.location = "' . base_url('dashboard/vehicles') . '";
                                     }
                                 </script>';
                 $this->load->view('admin/add_vehicle',$data);                
@@ -64,7 +67,7 @@ class Vehicle_Controller extends CI_Controller
 
 		$data =$this->Vehicle_Model->view();
 		$this->load->library('table');
- 		$this->table->set_heading('Name',  'Register No','Seat', 'Price','','');
+ 		$this->table->set_heading('Name',  'Register No','Seat', 'Price',anchor(base_url('dashboard/vehicles/add'),'add',['class' => 'button normal-button']));
  		if(!empty($data))
  		{
 	 		foreach ($data as $key => $value)
@@ -106,7 +109,10 @@ class Vehicle_Controller extends CI_Controller
       	$this->table->set_template($template);	 		
 		$data['data'] = $this->table->generate();
  		
- 	}
+ 	} else {
+            $data['message'] = 'No data Found
+                                    <a href="'.base_url('dashboard/vehicles/add').'">add</a>';
+        }
 		$this->load->view('admin/view_vehicle',$data);
 	
 	}
@@ -114,7 +120,7 @@ class Vehicle_Controller extends CI_Controller
 	{
 		if($this->Vehicle_Model->delete_vehicle($id));
 		{
-			redirect(base_url('dashboard/vehicle'));
+			redirect(base_url('dashboard/vehicles'));
 		}
 
 	}

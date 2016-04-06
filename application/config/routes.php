@@ -57,7 +57,7 @@ $route['default_controller'] = 'welcome';
 
 $route['add_client']= 'Client_Controller';
 $route['dashboard/client/delete/(:any)'] ='Client_Controller/delete/$1';
- $route['dashboard/client'] = 'Client_Controller/view';
+$route['dashboard/client'] = 'Client_Controller/view';
 
 
 //...................admin.........
@@ -66,19 +66,23 @@ $route['dashboard/client/delete/(:any)'] ='Client_Controller/delete/$1';
 $route['add_category']= 'Category_Controller';
 $route['dashboard/category/delete/(:any)'] ='Category_Controller/delete/$1';
 $route['dashboard/category'] = 'Category_Controller/view';
+
 //venue
 $route['add_venue'] = 'Venue_Controller';
 $route['dashboard/category'] ='Category_Controller/view_cat';
 $route['dashboard/venue'] = 'Venue_Controller/view';
 $route['dashboard/venue/delete/(:any)'] ='Venue_Controller/delete/$1';
+
 //vehicle
-$route['dashboard/add_vehicle'] = 'Vehicle_Controller';
+$route['dashboard/vehicles/add'] = 'Vehicle_Controller';
 $route['dashboard/vehicle/delete/(:any)'] ='Vehicle_Controller/delete/$1'; 
 $route['dashboard/vehicles'] = 'Vehicle_Controller/view';
+
 //entertiment
-$route['add_entertiment'] = 'Entertiment_Controller';
-$route['dashboard/entertiment/delete/(:any)'] ='Entertiment_Controller/delete/$1'; 
-$route['dashboard/entrtiment'] = 'Entertiment_Controller/view';
+$route['dashboard/entertinment/add'] = 'Entertiment_Controller';
+$route['dashboard/entertiment/delete/(:any)'] ='Entertiment_Controller/delete/$1';
+$route['dashboard/entertinment'] = 'Entertiment_Controller/view';
+
 //payment
 $route['add_payment'] = 'Payment_Controller';
 $route['dashboard/payment/delete/(:any)'] ='Payment_Controller/delete/$1'; 
