@@ -1,16 +1,14 @@
 <?php 
-
 /**
 * 
 */
-class Venue_Controller extends CI_Controller 
+class Client_Controller extends CI_Controller
 {
-
 	
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Venue_Model');
+		$this->load->model('Client_Model');
  		$this->load->helper('form');
  		$this->load->helper('url');
  		$this->load->library('form_validation');
@@ -18,40 +16,51 @@ class Venue_Controller extends CI_Controller
 	}
 	public function index()
 	{
-		$this->load->view('admin/add_venue');
+		$this->load->view('admin/view_client');
 	}
-	public function add_venue()
+	public function add_client()
 	{
 		$this->form_validation->set_rules('name','Name','required');
-		$this->form_validation->set_rules('description','Description','required');
-		$this->form_validation->set_rules('type','Type','required');
-
+		$this->form_validation->set_rules('address','Address','required');
+		$this->form_validation->set_rules('phone','Phone no','required');
+		$this->form_validation->set_rules('email','Email','required');
+		$this->form_validation->set_rules('bank','Bank Name','required');
+		$this->form_validation->set_rules('ac_no','A/c no ','required');
+		$this->form_validation->set_rules('amount','Amount ','required');
 		if ($this->form_validation->run() == FALSE) 
 		{
-			$this->load->view('admin/add_venue');
+			$this->load->view('add_client');
 		}
 		else
 		{
 			$name = $this->input->post('name');
-			$discription = $this->input->post('description');
-			$type = $this->input->post('type');
+			$address = $this->input->post('address');
+			$phone = $this->input->post('phone');
+			$email = $this->input->post('email');
+			$bank =$this->input->post('bank');
+			$ac_no = $this->input->post('ac_no');
+			$amount = $this->input->post('amount');
 			$data =[
 						'name'=>$name,
-						'description'=>$discription,
-						'type'=>$type,
+						'address'=>$address,
+						'phoneno'=>$phone,
+						'email'=>$email,
+						'bank_name'=>$from,
+						'acbano' =>$ac_no,
+						'amount'=>$amount
 			       ];
-			$result = $this->Venue_Model->insert_ven($data);
+			$result = $this->Client_Model->insert_cli($data);
 			if ($result) 
 			{
 				$data['message'] = '<script type="text/javascript">
                                     var r = alert("successful!");
                                     if (r == true) {
-                                        window.location = "' . base_url('add_venue') . '";
+                                        window.location = "' . base_url('add_client') . '";
                                     } else {
-                                        window.location = "' . base_url('add_venue') . '";
+                                        window.location = "' . base_url('add_client') . '";
                                     }
                                 </script>';
-                $this->load->view('admin/add_venue',$data);                
+                $this->load->view('admin/add_client',$data);                
 			}
 
 		}
@@ -59,9 +68,9 @@ class Venue_Controller extends CI_Controller
 	public function view()
 	{
 
-		$data =$this->Venue_Model->view();
+		$data =$this->Client_Model->view();
 		$this->load->library('table');
- 		$this->table->set_heading('Name',  'Description','Type', '','');
+ 		$this->table->set_heading('Name', 'Address','Phone No','Email', 'Bank Name','A/c No','Amount','','');
  		if(!empty($data))
  		{
 	 		foreach ($data as $key => $value)
@@ -69,9 +78,13 @@ class Venue_Controller extends CI_Controller
 	 			$this->table->add_row
 	 								(
 						 				$value->name,
-						 				$value->description,
-						 				$value->type,
-						 				'<a href="'. base_url('dashboard/venue/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
+						 				$value->address,
+						 				$value->phoneno,
+						 				$value->email,
+						 				$value->bank_name,
+						 				$value->acno,
+						 				$value->amount,
+						 				'<a href="'. base_url('dashboard/client/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
 	 								);
 	 		}
 			$template = [
@@ -103,34 +116,18 @@ class Venue_Controller extends CI_Controller
 		$data['data'] = $this->table->generate();
  		
  	}
-		$this->load->view('admin/view_venue',$data);
+		$this->load->view('admin/view_client',$data);
 	
 	}
 	public function delete($id)
 	{
-		if($this->Venue_Model->delete_ven($id));
+		if($this->Client_Model->delete_cli($id));
 		{
-			redirect(base_url('dashboard/venue'));
+			redirect(base_url('dashboard/client'));
 		}
 
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

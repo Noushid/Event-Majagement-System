@@ -49,15 +49,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+
 $route['default_controller'] = 'welcome';
+
+$route['add_client']= 'Client_Controller';
+$route['dashboard/client/delete/(:any)'] ='Client_Controller/delete/$1';
+ $route['dashboard/client'] = 'Client_Controller/view';
+
+
+//...................admin.........
 ///category
 $route['add_category']= 'Category_Controller';
 $route['dashboard/category/delete/(:any)'] ='Category_Controller/delete/$1';
-$route['dashboard/venue/delete/(:any)'] ='Venue_Controller/delete/$1'; 
+$route['dashboard/category'] = 'Category_Controller/view';
 //venue
 $route['add_venue'] = 'Venue_Controller';
 $route['dashboard/category'] ='Category_Controller/view_cat';
 $route['dashboard/venue'] = 'Venue_Controller/view';
+$route['dashboard/venue/delete/(:any)'] ='Venue_Controller/delete/$1';
 //vehicle
 $route['add_vehicle'] = 'Vehicle_Controller';
 $route['dashboard/vehicle/delete/(:any)'] ='Vehicle_Controller/delete/$1'; 

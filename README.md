@@ -1,2 +1,0 @@
-# EMS
-Event Management System,
