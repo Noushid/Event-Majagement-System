@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ems@localhost" uuid="f280f3c3-6ca0-4e51-b41b-7f0f9179d1b7">
+    <database-info product="MySQL" version="5.5.47-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="ems"/>
+    <table name="booking" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="events_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id,events_id"/>
+      <foreign-key name="fk_booking_events1" columns="events_id" ref-table="events" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_booking_events1_idx" unique="false" columns="events_id"/>
+    </table>
+    <table name="categories" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_events_categories1" table="events" schema="" catalog="ems" columns="categories_id"/>
+    </table>
+    <table name="clients" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="place" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phoneno" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="bank_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="acno" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="amount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_events_clients1" table="events" schema="" catalog="ems" columns="clients_id"/>
+    </table>
+    <table name="entertainment_type" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="events_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="entertainments_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id,events_id,entertainments_id"/>
+      <foreign-key name="fk_entertainment_type_events1" columns="events_id" ref-table="events" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_entertainment_type_entertainments1" columns="entertainments_id" ref-table="entertainments" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_entertainment_type_entertainments1_idx" unique="false" columns="entertainments_id"/>
+      <index name="fk_entertainment_type_events1_idx" unique="false" columns="events_id"/>
+    </table>
+    <table name="entertainments" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_entertainment_type_entertainments1" table="entertainment_type" schema="" catalog="ems" columns="entertainments_id"/>
+    </table>
+    <table name="event_vehicles" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="noof_vehicle" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="total_price" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="vehicles_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id,vehicles_id"/>
+      <foreign-key name="fk_event_vehicles_vehicles1" columns="vehicles_id" ref-table="vehicles" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_event_vehicles_vehicles1" unique="false" columns="vehicles_id"/>
+    </table>
+    <table name="events" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="start_time" sqlType="TIME" precision="8" scale="0" nullable="true" jdbcType="92"/>
+      <column name="start_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="end-time" sqlType="TIME" precision="8" scale="0" nullable="true" jdbcType="92"/>
+      <column name="end-date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="noof_people" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="payments_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="clients_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="venues_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="categories_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id,payments_id,clients_id,venues_id,categories_id"/>
+      <foreign-key name="fk_events_payments" columns="payments_id" ref-table="payments" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_events_clients1" columns="clients_id" ref-table="clients" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_events_venues1" columns="venues_id" ref-table="venues" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_events_categories1" columns="categories_id" ref-table="categories" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_booking_events1" table="booking" schema="" catalog="ems" columns="events_id"/>
+      <exported-key name="fk_entertainment_type_events1" table="entertainment_type" schema="" catalog="ems" columns="events_id"/>
+      <index name="fk_events_categories1_idx" unique="false" columns="categories_id"/>
+      <index name="fk_events_clients1_idx" unique="false" columns="clients_id"/>
+      <index name="fk_events_payments_idx" unique="false" columns="payments_id"/>
+      <index name="fk_events_venues1_idx" unique="false" columns="venues_id"/>
+    </table>
+    <table name="food_items" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_foods_food_items1" table="foods" schema="" catalog="ems" columns="food_items_id"/>
+    </table>
+    <table name="foods" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="food_items_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id,food_items_id"/>
+      <foreign-key name="fk_foods_food_items1" columns="food_items_id" ref-table="food_items" ref-schema="" ref-catalog="ems" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_foods_food_items1_idx" unique="false" columns="food_items_id"/>
+    </table>
+    <table name="payments" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="acno_from" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="acno_to" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phoneno" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_events_payments" table="events" schema="" catalog="ems" columns="payments_id"/>
+    </table>
+    <table name="users" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_type" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="vehicles" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="reg_no" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="seat" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="price" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_event_vehicles_vehicles1" table="event_vehicles" schema="" catalog="ems" columns="vehicles_id"/>
+    </table>
+    <table name="venues" schema="" catalog="ems" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_events_venues1" table="events" schema="" catalog="ems" columns="venues_id"/>
+    </table>
+  </data-source>
+</component>

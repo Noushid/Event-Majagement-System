@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `ems`.`clients` (
   `place` VARCHAR(45) NULL,
   `phoneno` VARCHAR(45) NULL,
   `bank_name` VARCHAR(45) NULL,
-  `a/cno` VARCHAR(45) NULL,
+  `acno` VARCHAR(45) NULL,
   `amount` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
