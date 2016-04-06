@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+body,
+html {
+  background: #34495e;
+  /* #34495e */
+  
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+.login {
+  width: 300px;
+  margin-top: 40vh;
+}
+
+.login input[type=text],
+.login input[type=password] {
+  opacity: 1;
+  display: block;
+  border: none;
+  outline: none;
+  width: 280px;
+  padding: 10px;
+  margin: 20px 0 0 0;
+  border-radius: 2px;
+}
+
+.login input[type=text] {
+  animation: bounce 1s;
+  -webkit-appearance: none;
+}
+.login input[type=text]:focus:valid ~ input[type=submit] {
+  background: #2ecc71;
+  color: #f2f2f2;
+}
+.login input[type=text]:focus:valid ~ input[type=submit]:hover {
+  background: #17b55a;  
+}
+.login input[type=text]:invalid ~ input[type=submit] {
+  background: #e74c3c;
+  color: #f2f2f2;
+}
+.login input[type=text]:invalid ~ input[type=submit]:hover {
+  background: #d63b2b;  
+}
+
+.login input[type=password] {
+  animation: bounce1 1.3s;
+}
+
+.login input[type=submit],
+.login input[type=button] {
+  border: 0;
+  outline: 0;
+  padding: 13px 18px;
+  margin: 40px 0 0 0;
+  border-radius: 2px;
+  font-weight: 600;
+  animation: bounce2 1.6s;
+}
+
+.login input[type=submit] {
+  float: right;
+  background: #f8f8f8;
+  color: #34495e;
+  outline: none;
+}
+.login input[type=submit]:hover {
+    background: #ccc;
+}
+.login input[type=button] {
+  background: #2C3E50;
+  color: #34495e;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
