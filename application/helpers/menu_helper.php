@@ -100,20 +100,20 @@ function dashboard_menu($current)
             'icon' => 'fa-tachometer',
             'link' => ''
         ],
-        'events' => [
-            'title' => 'events',
+        'event' => [
+            'title' => 'event',
             'icon' => 'fa-folder',
-            'link' => 'events'
+            'link' => 'event'
         ],
         'category' => [
             'title' => 'category',
             'icon' => 'fa-folder',
             'link' => 'category'
         ],
-        'bookings' => [
-            'title' => 'bookings',
+        'booking' => [
+            'title' => 'booking',
             'icon' => 'fa-folder',
-            'link' => 'bookings'
+            'link' => 'booking'
         ],
         'foods' => [
             'title' => 'foods',
@@ -139,8 +139,28 @@ function dashboard_menu($current)
             'title' => 'clients',
             'icon' => 'fa-folder',
             'link' => 'clients'
-        ]
-
+        ],
+        'clients' => [
+            'title' => 'clients',
+            'icon' => 'fa-folder',
+            'link' => 'clients'
+        ],
+        'Ajeeb' => [
+            'title' => 'Ajeeb',
+            'icon' => 'fa-folder',
+            'link' => 'Ajeeb'
+        ],
+        'ASD' => [
+            'title' => 'ASD',
+            'icon' => 'fa-folder',
+            'link' => 'ASD'
+        ],
+        'gfa' => [
+            'title' => 'gfa',
+            'icon' => 'fa-folder',
+            'link' => 'gfa'
+        ],
+         
     ];
 
     $html = '';

@@ -76,7 +76,7 @@ class Entertiment_Controller extends CI_Controller
 	 								(
 						 				$value->name, 				
 						 				$value->type,
-						 				'<a href="'. base_url('dashboard/entertiment/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
+						 				'<a href="'. base_url('dashboard/entertinment/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
 	 								);
 	 		}
 			$template = [

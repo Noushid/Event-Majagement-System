@@ -24,7 +24,7 @@ class Vehicle_Controller extends CI_Controller
 	public function add_vehilcle()
 	{
 		$this->form_validation->set_rules('name','Name','required');
-        $this->form_validation->set_rules('type','typeNo','required');
+       
         $this->form_validation->set_rules('reg_no','Register No','required');
 		$this->form_validation->set_rules('seat','Seat','xss_clean');
 		$this->form_validation->set_rules('price','Price','required');
@@ -35,13 +35,12 @@ class Vehicle_Controller extends CI_Controller
 		else
 		{
             $name = $this->input->post('name');
-            $type = $this->input->post('type');
+            
 			$reg_no =$this->input->post('reg_no');
 			$seat = $this->input->post('seat');
 			$price = $this->input->post('price');
 			$data =[
 						'name'=>$name,
-						'type'=>$type,
 						'reg_no'=>$reg_no,
 						'seat' =>$seat,
 						'price'=>$price,
@@ -52,7 +51,7 @@ class Vehicle_Controller extends CI_Controller
 				$data['message'] = '<script type="text/javascript">
                                     var r = alert("successful!");
                                     if (r == true) {
-                                        window.location = "' . base_url('dashboard/vehicles') . '";
+                                        window.location = "' . base_url('dashboard/vehicles/') . '";
                                     } else {
                                         window.location = "' . base_url('dashboard/vehicles') . '";
                                     }

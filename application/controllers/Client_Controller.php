@@ -116,7 +116,9 @@ class Client_Controller extends CI_Controller
       	$this->table->set_template($template);	 		
 		$data['data'] = $this->table->generate();
  		
- 	}
+ 	} else {
+            $data['message'] = 'No data Found';
+        }
 		$this->load->view('admin/view_client',$data);
 	
 	}

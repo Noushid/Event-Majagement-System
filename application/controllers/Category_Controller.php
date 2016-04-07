@@ -43,9 +43,9 @@ class Category_Controller extends CI_Controller
 				$data['message'] = '<script type="text/javascript">
                                     var r = alert("successful!");
                                     if (r == true) {
-                                        window.location = "' . base_url('add_category') . '";
+                                        window.location = "' . base_url('dashboard/category') . '";
                                     } else {
-                                        window.location = "' . base_url('add_category') . '";
+                                        window.location = "' . base_url('dashboard/category') . '";
                                     }
                                 </script>';
                 $this->load->view('admin/add_category',$data);                
@@ -65,7 +65,7 @@ class Category_Controller extends CI_Controller
 	{
 		$data =$this->Category_Model->view();
 		$this->load->library('table');
- 		$this->table->set_heading('Name',  'Description', '','');
+ 		$this->table->set_heading('Name',  'Description', '',anchor(base_url('dashboard/category/add'),'add',['class' => 'button normal-button']));
  		if(!empty($data))
  		{
 	 		foreach ($data as $key => $value)
@@ -106,7 +106,10 @@ class Category_Controller extends CI_Controller
       	$this->table->set_template($template);	 		
 		$data['data'] = $this->table->generate();
  		
- 	}
+ 	} else {
+            $data['message'] = 'No data Found
+                                    <a href="'.base_url('dashboard/category/add').'">add</a>';
+        }
 		$this->load->view('admin/view_cat',$data);
 	}
 }

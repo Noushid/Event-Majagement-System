@@ -54,22 +54,26 @@ $route['dashboard'] = 'Dashboard/dashboard';
 
 
 $route['default_controller'] = 'welcome';
-
+//client
 $route['add_client']= 'Client_Controller';
 $route['dashboard/client/delete/(:any)'] ='Client_Controller/delete/$1';
 $route['dashboard/client'] = 'Client_Controller/view';
- $route['dashboard/clients'] = 'Client_Controller/view';
-
+$route['dashboard/clients'] = 'Client_Controller/view';
+//event
+$route['event/add']= 'Event_Controller';
+$route['dashboard/event/delete/(:any)'] ='Event_Controller/delete/$1';
+$route['dashboard/event'] = 'Event_Controller/view';
+$route['dashboard/event'] = 'Event_Controller/view';
 
 //...................admin.........
 ///category
 
-$route['dashboard/add_category']= 'Category_Controller';
+$route['dashboard/category/add']= 'Category_Controller';
 $route['dashboard/category/delete/(:any)'] ='Category_Controller/delete/$1';
 $route['dashboard/category'] = 'Category_Controller/view';
 
 //venue
-$route['dashboard/add_venues'] = 'Venue_Controller';
+$route['dashboard/venues/add'] = 'Venue_Controller';
 $route['dashboard/category'] ='Category_Controller/view_cat';
 $route['dashboard/venues'] = 'Venue_Controller/view';
 $route['dashboard/venue/delete/(:any)'] ='Venue_Controller/delete/$1';
@@ -85,9 +89,16 @@ $route['dashboard/entertinment/delete/(:any)'] ='Entertiment_Controller/delete/$
 $route['dashboard/entertinment'] = 'Entertiment_Controller/view';
 
 //payment
-$route['dashboard/add_payment'] = 'Payment_Controller';
+$route['dashboard/payment/add'] = 'Payment_Controller';
 $route['dashboard/payment/delete/(:any)'] ='Payment_Controller/delete/$1'; 
 $route['dashboard/payments'] = 'Payment_Controller/view';
-
+//food_item
+$route['dashboard/fooditem/add'] = 'Food_ItemController';
+$route['dashboard/fooditem/delete/(:any)'] ='Food_ItemController/delete/$1'; 
+$route['dashboard/foods'] = 'Food_ItemController/view_item';
+//booking
+$route['dashboard/booking/add'] = 'Booking_Controller';
+$route['dashboard/booking/delete/(:any)'] ='Booking_Controller/delete/$1'; 
+$route['dashboard/booking'] = 'Booking_Controller/view_booking';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

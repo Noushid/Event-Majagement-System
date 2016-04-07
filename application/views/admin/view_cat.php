@@ -42,6 +42,10 @@
 	<?php if(isset($data))
 	{
 		echo $data;
-		} ?>
+		}
+        if (isset($message)) {
+        echo $message;
+    }
+     ?>
 </body>
 </html>

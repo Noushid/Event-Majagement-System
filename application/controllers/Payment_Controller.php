@@ -52,9 +52,9 @@ class Payment_Controller extends CI_Controller
 				$data['message'] = '<script type="text/javascript">
                                     var r = alert("successful!");
                                     if (r == true) {
-                                        window.location = "' . base_url('add_payment') . '";
+                                        window.location = "' . base_url('dashboard/payment') . '";
                                     } else {
-                                        window.location = "' . base_url('add_payment') . '";
+                                        window.location = "' . base_url('dashboard/payment') . '";
                                     }
                                 </script>';
                 $this->load->view('admin/add_payment',$data);                
@@ -67,7 +67,7 @@ class Payment_Controller extends CI_Controller
 
 		$data =$this->Payment_Model->view();
 		$this->load->library('table');
- 		$this->table->set_heading('Name',  'A/c no From','A/c no To', 'Address','Phone No','Email','','');
+ 		$this->table->set_heading('Name',  'A/c no From','A/c no To', 'Address','Phone No','Email','',anchor(base_url('dashboard/payment/add'),'add',['class' => 'button normal-button']));
  		if(!empty($data))
  		{
 	 		foreach ($data as $key => $value)
@@ -111,7 +111,10 @@ class Payment_Controller extends CI_Controller
       	$this->table->set_template($template);	 		
 		$data['data'] = $this->table->generate();
  		
- 	}
+ 	} else {
+            $data['message'] = 'No data Found
+                                    <a href="'.base_url('dashboard/payment/add').'">add</a>';
+        }
 		$this->load->view('admin/view_payment',$data);
 	
 	}
