@@ -2,70 +2,218 @@
 /**
 * 
 */
-class Client_Controller extends CI_Controller
+require_once(APPPATH . 'controllers/Check_Logged.php');
+
+class Client_Controller extends Check_Logged
 {
 	
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model('Client_Model');
+		$this->load->model('Booking_Model');
  		$this->load->helper('form');
  		$this->load->helper('url');
- 		$this->load->library('form_validation');
+ 		$this->load->library(['form_validation', 'session']);
  		$this->load->helper('security');
 	}
 	public function index()
 	{
 		$this->load->view('add_client');
 	}
+
+    public function home()
+    {
+        if ($this->logged == true and $_SESSION['type'] == 'user') {
+            $this->load->view('user/home');
+        } else {
+            redirect(base_url('login'));
+        }
+
+    }
+
+
+    public function login()
+    {
+        if ($this->logged == true and $_SESSION['type'] == 'user') {
+            redirect(base_url($_SESSION['username'].'/home'));
+        } else {
+            $this->load->view('log');
+        }
+    }
+
+    public function login_verify()
+    {
+        $username = $this->input->post('username');
+        $password = md5($this->input->post('password'));
+
+        $where = [
+            'username' => $username,
+            'password' => $password
+        ];
+        $result = $this->Client_Model->view_where($where);
+        if ($result != null) {
+            $id = $result[0]->id;
+            $userdata = [
+                'username' => $username,
+                'type' => 'user',
+                'id' => $id,
+                'logged' => true
+            ];
+
+            $this->session->set_userdata($userdata);
+            redirect(base_url($_SESSION['username'] . '/home'));
+        }
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata();
+        $this->session->sess_destroy();
+        redirect(base_url('login'));
+    }
+
 	public function add_client()
 	{
 		$this->form_validation->set_rules('name','Name','required');
-		$this->form_validation->set_rules('address','Address','required');
+//		$this->form_validation->set_rules('address','Address','required');
 		$this->form_validation->set_rules('phone','Phone no','required');
 		$this->form_validation->set_rules('place','Place','required');
-		$this->form_validation->set_rules('bank','Bank Name','required');
-		$this->form_validation->set_rules('ac_no','A/c no ','required');
-		$this->form_validation->set_rules('amount','Amount ','required');
+//		$this->form_validation->set_rules('bank','Bank Name','required');
+//		$this->form_validation->set_rules('ac_no','A/c no ','required');
+//		$this->form_validation->set_rules('amount','Amount ','required');
 		if ($this->form_validation->run() == FALSE) 
 		{
-			var_dump(validation_errors());
 			$this->load->view('add_client');
 		}
 		else
 		{
 			$name = $this->input->post('name');
-			$address = $this->input->post('address');
+//			$address = $this->input->post('address');
 			$phone = $this->input->post('phone');
 			$place = $this->input->post('place');
-			$bank =$this->input->post('bank');
-			$ac_no = $this->input->post('ac_no');
-			$amount = $this->input->post('amount');
+//			$bank =$this->input->post('bank');
+//			$ac_no = $this->input->post('ac_no');
+//			$amount = $this->input->post('amount');
+			$email = $this->input->post('email');
+			$username = $this->input->post('username');
+			$password = md5($this->input->post('password'));
+
 			$data =[
-						'name'=>$name,
-						'address'=>$address,
-						'phoneno'=>$phone,
-						'place'=>$place,
-						'bank_name'=>$bank,
-						'acno' =>$ac_no,
-						'amount'=>$amount
-			       ];
+                'name'=>$name,
+                'phoneno'=>$phone,
+                'place'=>$place,
+                'email' => $email,
+                'username' => $username,
+                'password' => $password
+             ];
 			$result = $this->Client_Model->insert_cli($data);
 			if ($result) 
 			{
-				$data['message'] = '<script type="text/javascript">
-                                    var r = alert("successful!");
-                                    if (r == true) {
-                                        window.location = "' . base_url('add_client') . '";
-                                    } else {
-                                        window.location = "' . base_url('add_client') . '";
-                                    }
-                                </script>';
-                $this->load->view('add_client',$data);                
+                $userdata = [
+                    'username' => $username,
+                    'type' => 'user',
+                    'id' => $result,
+                    'logged' => true
+                ];
+                $this->session->set_userdata($userdata);
+                redirect(base_url($_SESSION['username'].'/home'));
+
+//				$data['message'] = '<script type="text/javascript">
+//                                    var r = alert("successful!");
+//                                    if (r == true) {
+//                                        window.location = "' . base_url('add_client') . '";
+//                                    } else {
+//                                        window.location = "' . base_url('add_client') . '";
+//                                    }
+//                                </script>';
+//                $this->load->view('add_client',$data);
 			}
 
 		}
 	}
+
+
+    public function book()
+    {
+        if ($this->logged == true and $_SESSION['type'] == 'user') {
+            $this->load->view('user/booking');
+        } else {
+            redirect(base_url('login'));
+        }
+    }
+
+    public function book_submit()
+    {
+        $this->form_validation->set_rules('name','Name','required');
+        $this->form_validation->set_rules('description','Description');
+        $this->form_validation->set_rules('start_time','Start time','required');
+        $this->form_validation->set_rules('start_date','Strat date','required');
+        $this->form_validation->set_rules('end_time','End Time','required');
+        $this->form_validation->set_rules('end_date','End date','required');
+        $this->form_validation->set_rules('people','No Of people','required');
+
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('user/booking');
+        }
+        else
+        {
+            $name = $this->input->post('name');
+            $description = $this->input->post('description');
+            $start_time = $this->input->post('start_time');
+            $start_date = $this->input->post('start_date');
+            $end_time = $this->input->post('end_time');
+            $end_date = $this->input->post('end_date');
+            $people= $this->input->post('pepole');
+
+            $categories_id = $this->input->post('category');
+            $decaration_id = $this->input->post('decoration');
+            $venue_id = $this->input->post('venue');
+
+            $client_id = $_SESSION['id'];
+
+            $data = [
+                'name' =>$name,
+                'description' => $description,
+                'start_time'=>$start_time,
+                'start_date'=>$start_date,
+                'end_time'=>$end_time,
+                'end_date'=>$end_date,
+                'noof_people'=>$people,
+                'venues_id' => $venue_id,
+//                'payment_id' => $payment_id,
+                'categories_id' => $categories_id,
+                'client_id' => $client_id,
+                'decaration_id' => $decaration_id
+            ];
+            $event_id = $this->Event_Model->insert_event($data);
+            if ($event_id)
+            {
+                $data = [
+                    'name' => $name,
+                    'event_id' => $event_id,
+                ];
+
+                $booking_id = $this->Booking_Model->insert_booking($data);
+
+                if ($booking_id != null) {
+                    $data['message'] = '<script type="text/javascript">
+                                    var r = alert("successful!");
+                                    if (r == true) {
+                                        window.location = "' . base_url('event/add') . '";
+                                    } else {
+                                        window.location = "' . base_url('event/add') . '";
+                                    }
+                                </script>';
+                $this->load->view('user/booking',$data);
+                }
+            }
+
+        }
+    }
+
 	public function view()
 	{
 

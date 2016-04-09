@@ -12,19 +12,28 @@ class Client_Model extends My_Model
 	{
 		 parent::__construct();
 	}
+
     public function insert_cli($data)
 	{
 		return $this->insert($data);
 	}
+
+
 	public function delete_cli($id)
 	{
 		return $this->drop(['id' => $id]);
 	}
+
+
 	public function view()
 	{
 		return $this->get_all();
 	}
 
+    public function view_where($where)
+    {
+        return $this->get($where);
+    }
 
 
 

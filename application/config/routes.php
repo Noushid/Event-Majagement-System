@@ -57,10 +57,23 @@ $route['about'] = 'Home/about';
 $route['gallery'] = 'Home/gallery';
 $route['services'] = 'Home/services';
 $route['contacts'] = 'Home/contact';
-$route['login'] = 'Home/login';
 $route['admin-login'] = 'Home/admin_log';
 $route['admin-log'] = 'Home/admin_log';
 $route['sign-up'] = 'Home/register';
+
+$route['login'] = 'Client_Controller/login';
+
+$route['login/submit'] = 'Client_Controller/login_verify';
+
+$route['sign-up/submit'] = 'Client_Controller/add_client';
+
+
+////USER ROUTES//////
+
+$route['(:any)/logout'] = 'client_Controller/logout';
+$route['(:any)/home'] = 'client_Controller/home';
+$route['(:any)/booking'] = 'client_Controller/book';
+$route['(:any)/booking/submit'] = 'client_Controller/book_submit';
 
 
 

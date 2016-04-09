@@ -33,7 +33,7 @@
     <div class="row">
       <div class="grid_12">
         <h1>
-            <img src="images/logo.png" alt="Logo alt">        </h1>
+            <img src="<?php echo base_url('images/logo.png') ?>" alt="Logo alt">        </h1>
         <div class="socials">
         
           <a href="#" class="fa fa-twitter"></a>
@@ -66,14 +66,14 @@
 
 	<section id="content">
 	
-	<form action="">
+	<form action="<?php echo base_url('login/submit')?>" method="POST">
     <h1>User Login</h1>
    <div>
-      <input type="text" placeholder="Username" required id="username">
+      <input type="text" placeholder="Username" required id="username" name="username">
     </div>
 
     <div>
-      <input type="password" placeholder="Password" required id="password">
+      <input type="password" placeholder="Password" required id="password" name="password">
     </div>
     <div>
       <input type="submit" value="Log in"></a>

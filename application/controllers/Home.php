@@ -43,10 +43,6 @@ class Home extends CI_Controller
         $this->load->view('gallery');
     }
 
-    public function login()
-    {
-        $this->load->view('log');
-    }
 
     public function admin_log()
     {

@@ -156,7 +156,7 @@ function dashboard_menu($current)
                 <img class="img-responsive img-circle center-block" src="'.base_url().'" alt="User">
               </div>
               <div class="user-id text-center">
-                <span class="">Kudumbsree</span>
+                <span class="">Eventrum</span>
               </div>
             </li>';
     foreach ($menu as $key => $value) {
@@ -164,6 +164,49 @@ function dashboard_menu($current)
             $html .='<li><a href="'.base_url('dashboard/'.$value['link']).'" class="active">'.ucfirst($key).' &nbsp;<i class="menu-icon fa '.$value['icon'].' pull-right"></i></a></li>';
         } else {
             $html .='<li><a href="'.base_url('dashboard/'.$value['link']).'" class="">'.ucfirst($key).' &nbsp;<i class="menu-icon fa '.$value['icon'].' pull-right"></i></a></li>';
+        }
+    }
+    $html .= '</ul>
+        </div>
+      </nav>';
+    return $html;
+
+}
+
+
+function user_menu($current)
+{
+    $menu = [
+        'home' => [
+            'title' => 'home',
+            'icon' => 'fa-tachometer',
+            'link' => 'home'
+        ],
+        'booking' => [
+            'title' => 'booking',
+            'icon' => 'fa-tachometer',
+            'link' => 'booking'
+        ],
+
+    ];
+
+    $html = '';
+    $html .='<nav class="sidebar-left">
+        <div class="">
+          <ul class="menu-left">
+            <li>
+              <div class="user-img">
+                <img class="img-responsive img-circle center-block" src="'.base_url().'" alt="User">
+              </div>
+              <div class="user-id text-center">
+                <span class="">Eventrum</span>
+              </div>
+            </li>';
+    foreach ($menu as $key => $value) {
+        if ($current == $key) {
+            $html .='<li><a href="'.base_url($_SESSION['username'].'/'.$value['link']).'" class="active">'.ucfirst($key).' &nbsp;<i class="menu-icon fa '.$value['icon'].' pull-right"></i></a></li>';
+        } else {
+            $html .='<li><a href="'.base_url($_SESSION['username'].'/'.$value['link']).'" class="">'.ucfirst($key).' &nbsp;<i class="menu-icon fa '.$value['icon'].' pull-right"></i></a></li>';
         }
     }
     $html .= '</ul>

@@ -33,7 +33,7 @@
     <div class="row">
       <div class="grid_12">
         <h1>
-            <img src="images/logo.png" alt="Logo alt">        </h1>
+            <img src="<?php echo base_url('images/logo.png') ?>" alt="Logo alt">        </h1>
         <div class="socials">
 
           <a href="#" class="fa fa-twitter"></a>
@@ -65,26 +65,40 @@
 ======================-->
 <div class="container">
 
+    <script language="javascript" type="text/javascript">
+        function check(input){
+            if (input.value != document.getElementById('password').value) {
+                input.setCustomValidity('Password Must be matching');
+            }else {
+                /*input is valid --rest the error message*/
+                input.setCustomValidity('');
+            }
+        }
+    </script>
+
 	<section id="content">
-  	<form action="">
+  	<form action="<?php echo base_url('sign-up/submit')?>" method="POST">
       <h1>register</h1>
          <div>
-          <input type="text" placeholder="name" required id="name">
+          <input type="text" placeholder="name" required id="name" name="name">
+         </div>
+        <div>
+            <input type="text" placeholder="place" required id="place" name="place">
+        </div>
+        <div>
+             <input type="email" placeholder="email" required id="email" name="email">
          </div>
          <div>
-          <input type="email" placeholder="email" required id="email">
+          <input type="text" placeholder="phone number" required id="phone" name="phone">
          </div>
          <div>
-          <input type="text" placeholder="phone number" required id="phone">
+    			<input type="text" placeholder="Username" required id="username" name="username">
          </div>
          <div>
-    			<input type="text" placeholder="Username" required id="username">
+          <input type="password" placeholder="Password" required id="password" name="password">
          </div>
          <div>
-          <input type="password" placeholder="Password" required id="password">
-         </div>
-         <div>
-          <input type="password" placeholder="confirm_Password" required id="password">
+          <input type="password" placeholder="confirm_Password" required id="password" name="confirm_password" oninput="check(this)">
          </div>
             <input type="submit" value="Sign Up">
           </div>
