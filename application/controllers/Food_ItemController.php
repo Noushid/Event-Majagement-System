@@ -22,7 +22,7 @@ class Food_ItemController extends CI_Controller
 	public function add_item()
 	{
 		$this->form_validation->set_rules('name','Name','required');
-		$this->form_validation->set_rules('description','Description','required');
+		$this->form_validation->set_rules('description','Description');
 
 		if ($this->form_validation->run() == FALSE) 
 		{

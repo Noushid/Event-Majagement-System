@@ -12,21 +12,22 @@ class Category_Model extends My_Model
 	{
 		 parent::__construct();
 	}
+
     public function insert_cat($data)
 	{
 		return $this->insert($data);
 	}
+
 	public function delete_cat($id)
 	{
 		return $this->drop(['id' => $id]);
 	}
+
+
 	public function view()
 	{
 		return $this->get_all();
 	}
-
-
-
 
 
 }

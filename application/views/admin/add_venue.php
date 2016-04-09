@@ -41,11 +41,15 @@
     <div>	
 		<?php echo form_open(base_url('Venue_Controller/add_venue'));?>
 			<div><label for="name">Name:</label>
-			<input type="text" name="name"></div>
+			<input type="text" name="name" required=""></div>
 			<div><label for="description">Description</label>
 			<textarea name="description"></textarea></div>
 			<div><label for="type">Type:</label>
-			<input type="text" name="type" id=""></div>
+                <select name="type" id="type" required="">
+                    <option value="" disabled selected >Select one</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="auditorium">Auditorium</option>
+                </select>
 			<div><button  name="button">Submit</button></div>
 		<?php echo form_close(); ?>	
 	</div>

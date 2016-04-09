@@ -4,10 +4,10 @@
 <title>Contacts</title>
 <meta charset="utf-8">
 <meta name = "format-detection" content = "telephone=no" />
-<link rel="icon" href="images/favicon.ico">
-<link rel="shortcut icon" href="images/favicon.ico" />
-<link rel="stylesheet" href="css/contact-form.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="<?php echo base_url('images/favicon.ico') ?>">
+<link rel="shortcut icon" href="<?php echo base_url('images/favicon.ico') ?>" />
+<link rel="stylesheet" href="<?php echo base_url('css/contact-form.css') ?>">
+<link rel="stylesheet" href="<?php echo base_url('css/style.css') ?>">
 
 <script>
   $(window).load(function(){
@@ -30,20 +30,22 @@
          <img src="images/logo.png" alt="Logo alt">
          </h1>
         <div class="socials">
-          
-          <a href="www.facebook/login.com" class="fa fa-facebook"></a>
+        
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google-plus"></a>
           
         </div>
         <div class="navigation ">
           <nav>
             <ul class="sf-menu">
-             <li><a href="index.php">Home</a></li>
-             <li><a href="about.php">About</a></li>
-             <li><a href="gallery.php">Gallery</a></li>
-             <li><a href="services.php">services</a></li>
-             <li class="current"><a href="contacts.php">Contacts</a></li>
-             <li><a href="log.php">Login</a></li>
-	     <li><a href="admlog.php">Admins</a></li>
+             <li><a href="<?php echo base_url('index') ?>">Home</a></li>
+             <li><a href="<?php echo base_url('about') ?>">About</a></li>
+             <li><a href="<?php echo base_url('gallery') ?>">Gallery</a></li>
+             <li><a href="<?php echo base_url('services') ?>">services</a></li>
+             <li class="current"><a href="<?php echo base_url('contacts') ?>">Contacts</a></li>
+             <li><a href="<?php echo base_url('login') ?>">Login</a></li>
+	     <li><a href="<?php echo base_url('admin-log') ?>">Admins</a></li>
            </ul>
           </nav>
           <div class="clear"></div>
@@ -138,8 +140,9 @@
   <div class="container">
     <div class="row">
       <div class="grid_12"> 
-        <div class="copyright"><img src="images/f_logo.png" alt=""></a> &copy; <span id="copyright-year"></span> | Privacy Policy
+        <div class="copyright"><img src="<?php echo base_url('images/f_logo.png') ?>" alt=""></a> &copy; <span id="copyright-year"></span> | Privacy Policy
           <div class="sub_copyright">
+            Website designed by <a href="" rel="nofollow">ansha and shana</a>
           </div>
         </div>
       </div>

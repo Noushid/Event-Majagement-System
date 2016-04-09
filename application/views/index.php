@@ -4,21 +4,21 @@
 <title>Home</title>
 <meta charset="utf-8">
 <meta name = "format-detection" content = "telephone=no" />
-<link rel="icon" href="images/favicon.ico">
-<link rel="shortcut icon" href="images/favicon.ico" />
-<link rel="stylesheet" href="css/touchTouch.css">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/script.js"></script> 
-<script src="js/superfish.js"></script>
-<script src="js/jquery.equalheights.js"></script>
-<script src="js/jquery.mobilemenu.js"></script>
-<script src="js/tmStickUp.js"></script>
-<script src="js/jquery.ui.totop.js"></script>
-<script src="js/touchTouch.jquery.js"></script>
-<script src="js/jquery.shuffle-images.js"></script>
+<link rel="icon" href="<?php echo base_url('images/favicon.ico')?>">
+<link rel="shortcut icon" href="<?php echo base_url('images/favicon.ico') ?>" />
+<link rel="stylesheet" href="<?php echo base_url('css/touchTouch.css') ?>">
+<link rel="stylesheet" href="<?php echo base_url('css/style.css') ?>">
+<script src="<?php echo base_url('js/jquery.js')?>"></script>
+<script src="<?php echo base_url('js/jquery-migrate-1.1.1.js') ?>></script>
+<script src="<?php echo base_url('js/jquery.easing.1.3.js') ?>"></script>
+<script src="<?php echo base_url('js/script.js') ?>></script>
+<script src="<?php echo base_url('js/superfish.js') ?>"></script>
+<script src="<?php echo base_url('js/jquery.equalheights.js') ?>></script>
+<script src="<?php echo base_url('js/jquery.mobilemenu.js') ?>"></script>
+<script src="<?php echo base_url('js/tmStickUp.js') ?>></script>
+<script src="<?php echo base_url('js/jquery.ui.totop.js') ?>"></script>
+<script src="<?php echo base_url('js/touchTouch.jquery.js') ?>></script>
+<script src="<?php echo base_url('js/jquery.shuffle-images.js') ?>"></script>
 
 <script>
   $(window).load(function(){
@@ -40,8 +40,8 @@
 </div>
 <![endif]-->
 <!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<link rel="stylesheet" media="screen" href="css/ie.css">
+<script src="<?php echo base_url('js/html5shiv.js') ?>"></script>
+<link rel="stylesheet" media="screen" href="<?php echo base_url('css/ie.css')?>">
 <![endif]-->
 </head>
 
@@ -56,7 +56,7 @@
       <div class="grid_12">
         <h1>
           <a href="index.php">
-            <img src="images/logo.png" alt="Logo alt">
+            <img src="<?php echo base_url('images/logo.png') ?>" alt="Logo alt">
           </a>
         </h1>
         <div class="socials">
@@ -67,13 +67,13 @@
         <div class="navigation ">
           <nav>
             <ul class="sf-menu">
-             <li class="current"><a href="index.php">Home</a></li>
-             <li><a href="about.php">About</a></li>
-             <li><a href="services.php">Services</a></li>
-             <li><a href="gallery.php">Gallery</a></li>
-             <li><a href="contacts.php">Contacts</a></li>
-             <li><a href="log.php">Login</a></li>
-             <li><a href="admlog.php">Admin</a></li>
+             <li class="current"><a href="<?php echo base_url('index') ?>">Home</a></li>
+             <li><a href="<?php echo base_url('about') ?>">About</a></li>
+             <li><a href="<?php echo base_url('services') ?>">Services</a></li>
+             <li><a href="<?php echo base_url('gallery') ?>">Gallery</a></li>
+             <li><a href="<?php echo base_url('contacts') ?>">Contacts</a></li>
+             <li><a href="<?php echo base_url('login') ?>">Login</a></li>
+             <li><a href="<?php echo base_url('admin-log') ?>">Admin</a></li>
            </ul>
           </nav>
           <div class="clear"></div>
@@ -90,16 +90,16 @@
     <div class="row">
       <div class="page1_block">
         <div class="grid_6">
-          <img src="images/page1_img1.jpg" alt="">
+          <img src="<?php echo base_url('images/page1_img1.jpg') ?>" alt="">
         </div>
         <div class="grid_6">
           <h2>Best Ideas for <br> Your Parties</h2>
           <div class="row">
             <div class="grid_3">
-              <img src="images/5.jpg" alt="">
+              <img src="<?php echo base_url('images/5.jpg') ?>" alt="">
             </div>
             <div class="grid_3">
-              <img src="images/page1_img3.jpg" alt="">
+              <img src="<?php echo base_url('images/page1_img3.jpg') ?> " alt="">
             </div>
           </div>
         </div>
@@ -124,23 +124,23 @@
            <div data-si-mousemove-trigger="100" class="shuffle-me">
             <a href="#" class="info"><div class="shuffle_title">Birthday Parties <span>More</span></div></a>
             <div class="images">
-              <img src="images/page1_img4.jpg" alt="">
-              <img src="images/shuffle_1.jpg" alt="">
-              <img src="images/shuffle_2.jpg" alt="">
+              <img src="<?php echo base_url('images/page1_img4.jpg' ) ?>" alt="">
+              <img src="<?php echo base_url('images/shuffle_1.jpg' ) ?>'" alt="">
+              <img src="<?php echo base_url('images/shuffle_2.jpg' ) ?>" alt="">
             </div></div>
         </div>
         <div class="grid_6">
            <div data-si-mousemove-trigger="100" class="shuffle-me">
             <a href="#" class="info"><div class="shuffle_title">Wedding Parties <span>More</span></div></a>
             <div class="images">
-              <img src="images/shuffle_2.jpg" alt="">
-              <img src="images/page1_img4.jpg" alt="">
-              <img src="images/shuffle_1.jpg" alt="">
+              <img src="<?php echo base_url('images/shuffle_2.jpg') ?>" alt="">
+              <img src="<?php echo base_url('images/page1_img4.jpg') ?>'" alt="">
+              <img src="<?php echo base_url('images/shuffle_1.jpg') ?>" alt="">
             </div></div>
         </div>
         <div class="grid_12">
           <h3>Welcome</h3>
-          <img src="images/page1_img7.jpg" alt="" class="img_inner fleft">
+          <img src="<?php echo base_url('images/page1_img7.jpg') ?>" alt="" class="img_inner fleft">
           <div class="extra_wrapper">
             <p class="text1">Follow the link to find information about this <a href="" class="color1"  rel="nofollow">evetrum</a>. </p>
             <!-- <p class="text1 offset__1">Want more <a href="" rel="nofollow" class="color1">goodies</a> of this kind? Visit TemplateMonster.com</p> -->
@@ -157,25 +157,25 @@
         <div class="row">
           <div class="grid_4">
             <div class="view">  
-              <img src="images/page1_img8.jpg" alt="" />  
+              <img src="<?php echo base_url('images/page1_img8.jpg') ?>" alt="" />
               <div class="mask">
-                <a href="images/gallery/big1.jpg" class="info fa fa-search" title="Full Image"></a>  
+                <a href="<?php echo base_url('images/gallery/big1.jpg') ?>" class="info fa fa-search" title="Full Image"></a>
               </div>  
             </div>   
           </div>
           <div class="grid_4">
             <div class="view">  
-              <img src="images/page1_img9.jpg" alt="" />  
+              <img src="<?php echo base_url('images/page1_img9.jpg') ?>" alt="" />
               <div class="mask">
-                <a href="images/gallery/big2.jpg" class="info fa fa-search" title="Full Image"></a>  
+                <a href="<?php echo base_url('images/gallery/big2.jpg') ?>" class="info fa fa-search" title="Full Image"></a>
               </div>  
             </div>   
           </div>
           <div class="grid_4">
             <div class="view">  
-              <img src="images/page1_img11.jpg" alt="" />  
+              <img src="<?php echo base_url('images/page1_img11.jpg') ?>" alt="" />
               <div class="mask">
-                <a href="images/gallery/big4.jpg" class="info fa fa-search" title="Full Image"></a>  
+                <a href="<?php echo base_url('images/gallery/big4.jpg') ?>" class="info fa fa-search" title="Full Image"></a>
               </div> 
             </div>   
           </div>
@@ -209,7 +209,7 @@
   <div class="container">
     <div class="row">
       <div class="grid_12"> 
-        <div class="copyright"><a href="#" class="f_logo"><img src="images/f_logo.png" alt=""></a> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+        <div class="copyright"><a href="#" class="f_logo"><img src="<?php echo base_url('images/f_logo.png') ?>" alt=""></a> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
           <div class="sub_copyright">
             Website designed by <a href="#" rel="nofollow">Ansha and shana</a>
           </div>

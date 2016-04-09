@@ -144,23 +144,7 @@ function dashboard_menu($current)
             'title' => 'clients',
             'icon' => 'fa-folder',
             'link' => 'clients'
-        ],
-        'Ajeeb' => [
-            'title' => 'Ajeeb',
-            'icon' => 'fa-folder',
-            'link' => 'Ajeeb'
-        ],
-        'ASD' => [
-            'title' => 'ASD',
-            'icon' => 'fa-folder',
-            'link' => 'ASD'
-        ],
-        'gfa' => [
-            'title' => 'gfa',
-            'icon' => 'fa-folder',
-            'link' => 'gfa'
-        ],
-         
+        ]
     ];
 
     $html = '';

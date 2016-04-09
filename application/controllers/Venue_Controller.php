@@ -23,7 +23,7 @@ class Venue_Controller extends CI_Controller
 	public function add_venue()
 	{
 		$this->form_validation->set_rules('name','Name','required');
-		$this->form_validation->set_rules('description','Description','required');
+		$this->form_validation->set_rules('description','Description');
 		$this->form_validation->set_rules('type','Type','required');
 
 		if ($this->form_validation->run() == FALSE) 

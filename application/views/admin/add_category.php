@@ -41,7 +41,7 @@
 	<div>	
 		<?php echo form_open(base_url('Category_Controller/add_cat'));?>
 			<div><label for="name">Name:</label>
-			<input type="text" name="name"></div>
+			<input type="text" name="name" required=""></div>
 			<div><label for="description">Description</label>
 			<textarea name="description"></textarea></div>
 			<div><button  name="button">Submit</button></div>

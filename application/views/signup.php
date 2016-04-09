@@ -7,8 +7,8 @@
 
 <title>login</title>
 
-<link rel="stylesheet" type="text/css" href="cs.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/cs.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/style.css') ?>">
 
 <script>
   $(window).load(function(){
@@ -35,17 +35,22 @@
         <h1>
             <img src="images/logo.png" alt="Logo alt">        </h1>
         <div class="socials">
-        <a href="www.facebook.com" class="fa fa-facebook"></a>        </div>
+
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google-plus"></a>
+
+        </div>
         <div class="navigation ">
           <nav>
             <ul class="sf-menu">
-			 <li><a href="index.html">Home</a></li>
-             <li><a href="about.php">About</a></li>
-             <li><a href="gallery.php">Gallery</a></li>
-             <li><a href="services.php">services</a></li>
-             <li><a href="contacts.php">Contacts</a></li>
-	     <li class="current"><a href="log.html">Login</a></li>
-	     <li><a href="admlog.php">Admin</a></li>
+			 <li><a href="<?php echo base_url('index') ?>">Home</a></li>
+             <li><a href="<?php echo base_url('about') ?>">About</a></li>
+             <li><a href="<?php echo base_url('gallery') ?>">Gallery</a></li>
+             <li><a href="<?php echo base_url('services') ?>">services</a></li>
+             <li><a href="<?php echo base_url('contacts') ?>">Contacts</a></li>
+	     <li class="current"><a href="<?php echo base_url('login') ?>">Login</a></li>
+	     <li><a href="<?php echo base_url('admin-login') ?>">Admin</a></li>
            </ul>
           </nav>
           <div class="clear"></div>

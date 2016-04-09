@@ -39,8 +39,8 @@
     </nav>
     <div>
 	<?php echo form_open(base_url('Entertiment_Controller/add_entr'));?>
-		<label for="Name">Name</label><input type="text" name="name">
-		<label for="Type"> Type</label><input type="text" name="type">
+		<label for="Name">Name</label><input type="text" name="name" required="">
+		<label for="Type"> Type</label><input type="text" name="type" required="">
 		<div><button  name="button">Submit</button></div>
 	<?php echo form_close() ?>
 	<?php if(isset($message))

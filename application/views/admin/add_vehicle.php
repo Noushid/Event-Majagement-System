@@ -42,14 +42,14 @@
         <?php echo form_open(base_url('Vehicle_Controller/add_vehilcle'));?>
 
         <label for="name">Name</label>
-            <input type="text" name="name"><br>
+            <input type="text" name="name" required=""><br>
         
         <label for="reg_no">Register No</label>
-            <input type="text" name="reg_no"><br>
+            <input type="text" name="reg_no" required=""><br>
         <label for="seat">Seat</label>
             <input type="text" name="seat"><br>
         <label for="price">Price</label>
-            <input type="text" name="price"><br>
+            <input type="text" name="price" required=""><br>
         <div><button  name="button">Submit</button></div>
         <?php echo form_close() ?>
         <?php if(isset($message))
