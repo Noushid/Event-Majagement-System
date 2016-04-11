@@ -19,7 +19,7 @@
 <body>
 <div class="page-wrapper">
     <div class="left-wrapper">
-        <?php echo dashboard_menu('category');?>
+        <?php echo dashboard_menu('decoration');?>
     </div>
 
     <nav class="top-wrapper">
@@ -38,25 +38,25 @@
         </div>
     </nav>
 
-	<div>	
-		<?php echo form_open(base_url('Category_Controller/add_cat'));?>
-			<div>
-                <label for="name">Name:</label>
-			    <input type="text" name="name" required="">
-            </div>
-			<div><label for="description">Description</label>
-			<textarea name="description"></textarea></div>
+    <div>
+        <?php echo form_open(base_url('Dashboard/add_decoration_submit'));?>
+        <div><label for="name">Name:</label>
+            <input type="text" name="name" required=""></div>
+        <div><label for="type">Type</label>
+            <input type="text" name="type" id="type"/>
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" name="price" required="">
+        </div>
+        <div><button  name="button">Submit</button></div>
+        <?php echo form_close(); ?>
+    </div>
+    <?php if(isset($message))
+    {
+        echo $message;
 
-
-			<div><button  name="button">Submit</button></div>
-		<?php echo form_close(); ?>	
-	</div>
-	<?php if(isset($message))
-		{
-			echo $message;
-
-		} ?>
-   </div>
+    } ?>
+</div>
 </div>
 </body>
 </html>

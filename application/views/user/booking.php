@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
+<!--<script src="--><?php //echo base_url('js/date_picker.js')?><!--"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+
+<script type="text/javascript">
+//    $(function() {
+//        $( "#datepicker" ).datepicker();
+//    });
+</script>
+
 <?php echo form_open(base_url($_SESSION['username'].'/booking/submit'));?>
 <label for="name">Name</label>
 <input type="text" name="name" required=""><br>
@@ -16,30 +27,47 @@
 
 <label for="type">category</label>
 <select name="category" id="category" required="">
-    <option value="jknkj">jklj</option>
+    <?php if (isset($category)) {
+        foreach ($category as $value) {
+            echo '<option value="'.$value->id.'">'.$value->name.'</option>';
+        }
+    }?>
+
 </select><br/>
 
 <label for="venue">venue</label>
 <select name="venue" id="venue" required="">
-    <option value="1">kj</option>
+    <?php if (isset($venue)) {
+        foreach ($venue as $value) {
+            echo '<option value="'.$value->id.'">'.$value->name.'('.$value->type.')'.'</option>';
+        }
+
+    }?>
+
 </select><br/>
 
 <label for="decaration">decoration</label>
 <select name="decoration" id="decoration" required="">
-    <option value="medium">medium</option>
+    <?php if (isset($decoration)) {
+        foreach ($decoration as $value) {
+            echo '<option value="'.$value->id.'">'.$value->name.'('.$value->price.')'.'</option>';
+        }
+    }?>
+
 </select><br/>
 
 <label for="start_date">Start Date</label>
-<input type="text" name="start_date" required=""><br>
+<input type="date" name="start_date" id="datepicker" required="" placeholder="yyyy/mm/dd"><br>
 
 <label for="start_time">Start Time</label>
-<input type="text" name="start_time" required=""><br>
-
-<label for="end_time">End Time</label>
-<input type="text" name="end_time" required=""><br>
+<input type="text" name="start_time" required="" placeholder="hh/mm"><br>
 
 <label for="end_date">End Date</label>
-<input type="text" name="end_date" required=""><br>
+<input type="text" name="end_date" required="" placeholder="yyyy/mm/dd"><br>
+
+<label for="end_time">End Time</label>
+<input type="text" name="end_time" required="" placeholder="hh/mm"><br>
+
 
 <label for="no_of_pepole">No Of Pepole</label>
 <input type="text" name="people" required=""><br>

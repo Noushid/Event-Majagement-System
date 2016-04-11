@@ -144,6 +144,11 @@ function dashboard_menu($current)
             'title' => 'clients',
             'icon' => 'fa-folder',
             'link' => 'clients'
+        ],
+        'decoration' => [
+            'title' => 'decoration',
+            'icon' => 'fa-folder',
+            'link' => 'decoration'
         ]
     ];
 
@@ -196,7 +201,7 @@ function user_menu($current)
           <ul class="menu-left">
             <li>
               <div class="user-img">
-                <img class="img-responsive img-circle center-block" src="'.base_url().'" alt="User">
+                <img class="img-responsive img-circle center-block" src="'.base_url('images/logo_dash.png').'" alt="User">
               </div>
               <div class="user-id text-center">
                 <span class="">Eventrum</span>

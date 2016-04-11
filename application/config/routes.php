@@ -92,7 +92,9 @@ $route['dashboard/clients'] = 'Client_Controller/view';
 $route['event/add']= 'Event_Controller';
 $route['dashboard/event/delete/(:any)'] ='Event_Controller/delete/$1';
 $route['dashboard/event'] = 'Event_Controller/view';
-$route['dashboard/event'] = 'Event_Controller/view';
+//$route['dashboard/event'] = 'Event_Controller/view';
+$route['dashboard/decoration'] = 'Dashboard/view_decoration';
+$route['dashboard/decoration/add'] = 'Dashboard/add_decoration';
 
 //...................admin.........
 ///category

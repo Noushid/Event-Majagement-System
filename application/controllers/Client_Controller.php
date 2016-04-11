@@ -12,6 +12,10 @@ class Client_Controller extends Check_Logged
 		parent::__construct();
 		$this->load->model('Client_Model');
 		$this->load->model('Booking_Model');
+		$this->load->model('Category_Model');
+		$this->load->model('Venue_Model');
+		$this->load->model('Decoration_Model');
+		$this->load->model('Fooditem_Model');
  		$this->load->helper('form');
  		$this->load->helper('url');
  		$this->load->library(['form_validation', 'session']);
@@ -137,7 +141,30 @@ class Client_Controller extends Check_Logged
     public function book()
     {
         if ($this->logged == true and $_SESSION['type'] == 'user') {
-            $this->load->view('user/booking');
+
+            /* get all category */
+            $catogery = $this->Category_Model->view();
+            if ($catogery != false) {
+                $data['category'] = $catogery;
+            }
+
+            /*get all venues*/
+
+            $venue = $this->Venue_Model->view();
+            if ($venue != null) {
+                $data['venue'] = $venue;
+            }
+
+
+            /*get all decoration*/
+
+            $decoration = $this->Decoration_Model->view_all();
+
+            if ($decoration != null) {
+                $data['decoration'] = $decoration;
+            }
+
+            $this->load->view('user/booking', $data);
         } else {
             redirect(base_url('login'));
         }
@@ -188,28 +215,29 @@ class Client_Controller extends Check_Logged
                 'client_id' => $client_id,
                 'decaration_id' => $decaration_id
             ];
-            $event_id = $this->Event_Model->insert_event($data);
-            if ($event_id)
-            {
-                $data = [
-                    'name' => $name,
-                    'event_id' => $event_id,
-                ];
-
-                $booking_id = $this->Booking_Model->insert_booking($data);
-
-                if ($booking_id != null) {
-                    $data['message'] = '<script type="text/javascript">
-                                    var r = alert("successful!");
-                                    if (r == true) {
-                                        window.location = "' . base_url('event/add') . '";
-                                    } else {
-                                        window.location = "' . base_url('event/add') . '";
-                                    }
-                                </script>';
-                $this->load->view('user/booking',$data);
-                }
-            }
+            var_dump($data);
+//            $event_id = $this->Event_Model->insert_event($data);
+//            if ($event_id)
+//            {
+//                $data = [
+//                    'name' => $name,
+//                    'event_id' => $event_id,
+//                ];
+//
+//                $booking_id = $this->Booking_Model->insert_booking($data);
+//
+//                if ($booking_id != null) {
+//                    $data['message'] = '<script type="text/javascript">
+//                                    var r = alert("successful!");
+//                                    if (r == true) {
+//                                        window.location = "' . base_url('event/add') . '";
+//                                    } else {
+//                                        window.location = "' . base_url('event/add') . '";
+//                                    }
+//                                </script>';
+//                $this->load->view('user/booking',$data);
+//                }
+//            }
 
         }
     }
