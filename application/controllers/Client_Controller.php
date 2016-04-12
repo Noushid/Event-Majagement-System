@@ -156,7 +156,7 @@ class Client_Controller extends Check_Logged
 
 
         $this->load->library('table');
-        $this->table->set_heading('Name',  'starting date', 'ending date', 'peoples', 'Estimated coast' ,anchor(base_url(uri_string().'/add'),'add',['class' => 'button normal-button']));
+        $this->table->set_heading('Name',  'starting date', 'ending date', 'peoples', 'Estimated coast' ,anchor(base_url(uri_string().'/add'),'make booking',['class' => 'button button-normal']));
         if(!empty($data))
         {
             foreach ($data['all'] as $key => $value)

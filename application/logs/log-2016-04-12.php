@@ -3902,3 +3902,349 @@ INFO - 2016-04-12 23:10:24 --> Table Class Initialized
 INFO - 2016-04-12 23:10:24 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/booking.php
 INFO - 2016-04-12 23:10:24 --> Final output sent to browser
 DEBUG - 2016-04-12 23:10:24 --> Total execution time: 0.0173
+INFO - 2016-04-12 23:18:41 --> Config Class Initialized
+INFO - 2016-04-12 23:18:41 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:18:41 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:18:41 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:18:41 --> URI Class Initialized
+INFO - 2016-04-12 23:18:41 --> Router Class Initialized
+INFO - 2016-04-12 23:18:41 --> Output Class Initialized
+INFO - 2016-04-12 23:18:41 --> Security Class Initialized
+DEBUG - 2016-04-12 23:18:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:18:41 --> Input Class Initialized
+INFO - 2016-04-12 23:18:41 --> Language Class Initialized
+INFO - 2016-04-12 23:18:41 --> Loader Class Initialized
+INFO - 2016-04-12 23:18:41 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:18:41 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:18:41 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:18:41 --> Controller Class Initialized
+INFO - 2016-04-12 23:18:41 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:18:41 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:18:41 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:18:41 --> Model Class Initialized
+INFO - 2016-04-12 23:18:41 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:18:41 --> Model Class Initialized
+INFO - 2016-04-12 23:18:41 --> Model Class Initialized
+INFO - 2016-04-12 23:18:41 --> Model Class Initialized
+INFO - 2016-04-12 23:18:41 --> Model Class Initialized
+INFO - 2016-04-12 23:18:41 --> Model Class Initialized
+INFO - 2016-04-12 23:18:41 --> Model Class Initialized
+INFO - 2016-04-12 23:18:41 --> Model Class Initialized
+DEBUG - 2016-04-12 23:18:41 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:18:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:18:41 --> Table Class Initialized
+DEBUG - 2016-04-12 23:18:41 --> Table class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:18:41 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/view_booking.php
+INFO - 2016-04-12 23:18:41 --> Final output sent to browser
+DEBUG - 2016-04-12 23:18:41 --> Total execution time: 0.0113
+INFO - 2016-04-12 23:18:59 --> Config Class Initialized
+INFO - 2016-04-12 23:18:59 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:18:59 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:18:59 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:18:59 --> URI Class Initialized
+INFO - 2016-04-12 23:18:59 --> Router Class Initialized
+INFO - 2016-04-12 23:18:59 --> Output Class Initialized
+INFO - 2016-04-12 23:18:59 --> Security Class Initialized
+DEBUG - 2016-04-12 23:18:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:18:59 --> Input Class Initialized
+INFO - 2016-04-12 23:18:59 --> Language Class Initialized
+INFO - 2016-04-12 23:18:59 --> Loader Class Initialized
+INFO - 2016-04-12 23:18:59 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:18:59 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:18:59 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:18:59 --> Controller Class Initialized
+INFO - 2016-04-12 23:18:59 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:18:59 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:18:59 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:18:59 --> Model Class Initialized
+INFO - 2016-04-12 23:18:59 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:18:59 --> Model Class Initialized
+INFO - 2016-04-12 23:18:59 --> Model Class Initialized
+INFO - 2016-04-12 23:18:59 --> Model Class Initialized
+INFO - 2016-04-12 23:18:59 --> Model Class Initialized
+INFO - 2016-04-12 23:18:59 --> Model Class Initialized
+INFO - 2016-04-12 23:18:59 --> Model Class Initialized
+INFO - 2016-04-12 23:18:59 --> Model Class Initialized
+DEBUG - 2016-04-12 23:18:59 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:18:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:18:59 --> Table Class Initialized
+DEBUG - 2016-04-12 23:18:59 --> Table class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:18:59 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/view_booking.php
+INFO - 2016-04-12 23:18:59 --> Final output sent to browser
+DEBUG - 2016-04-12 23:18:59 --> Total execution time: 0.0142
+INFO - 2016-04-12 23:19:01 --> Config Class Initialized
+INFO - 2016-04-12 23:19:01 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:19:01 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:19:01 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:19:01 --> URI Class Initialized
+INFO - 2016-04-12 23:19:01 --> Router Class Initialized
+INFO - 2016-04-12 23:19:01 --> Output Class Initialized
+INFO - 2016-04-12 23:19:01 --> Security Class Initialized
+DEBUG - 2016-04-12 23:19:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:19:01 --> Input Class Initialized
+INFO - 2016-04-12 23:19:01 --> Language Class Initialized
+INFO - 2016-04-12 23:19:01 --> Loader Class Initialized
+INFO - 2016-04-12 23:19:01 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:19:01 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:19:01 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:19:01 --> Controller Class Initialized
+INFO - 2016-04-12 23:19:01 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:19:01 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:19:01 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:19:01 --> Model Class Initialized
+INFO - 2016-04-12 23:19:01 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:19:01 --> Model Class Initialized
+INFO - 2016-04-12 23:19:01 --> Model Class Initialized
+INFO - 2016-04-12 23:19:01 --> Model Class Initialized
+INFO - 2016-04-12 23:19:01 --> Model Class Initialized
+INFO - 2016-04-12 23:19:01 --> Model Class Initialized
+INFO - 2016-04-12 23:19:01 --> Model Class Initialized
+INFO - 2016-04-12 23:19:01 --> Model Class Initialized
+DEBUG - 2016-04-12 23:19:01 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:19:01 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:19:01 --> Table Class Initialized
+INFO - 2016-04-12 23:19:01 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/home.php
+INFO - 2016-04-12 23:19:01 --> Final output sent to browser
+DEBUG - 2016-04-12 23:19:01 --> Total execution time: 0.0127
+INFO - 2016-04-12 23:19:02 --> Config Class Initialized
+INFO - 2016-04-12 23:19:02 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:19:02 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:19:02 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:19:02 --> URI Class Initialized
+INFO - 2016-04-12 23:19:02 --> Router Class Initialized
+INFO - 2016-04-12 23:19:02 --> Output Class Initialized
+INFO - 2016-04-12 23:19:02 --> Security Class Initialized
+DEBUG - 2016-04-12 23:19:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:19:02 --> Input Class Initialized
+INFO - 2016-04-12 23:19:02 --> Language Class Initialized
+INFO - 2016-04-12 23:19:02 --> Loader Class Initialized
+INFO - 2016-04-12 23:19:02 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:19:02 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:19:02 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:19:02 --> Controller Class Initialized
+INFO - 2016-04-12 23:19:02 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:19:02 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:19:02 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:19:02 --> Model Class Initialized
+INFO - 2016-04-12 23:19:02 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:19:02 --> Model Class Initialized
+INFO - 2016-04-12 23:19:02 --> Model Class Initialized
+INFO - 2016-04-12 23:19:02 --> Model Class Initialized
+INFO - 2016-04-12 23:19:02 --> Model Class Initialized
+INFO - 2016-04-12 23:19:02 --> Model Class Initialized
+INFO - 2016-04-12 23:19:02 --> Model Class Initialized
+INFO - 2016-04-12 23:19:02 --> Model Class Initialized
+DEBUG - 2016-04-12 23:19:02 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:19:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:19:02 --> Table Class Initialized
+DEBUG - 2016-04-12 23:19:02 --> Table class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:19:02 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/view_booking.php
+INFO - 2016-04-12 23:19:02 --> Final output sent to browser
+DEBUG - 2016-04-12 23:19:02 --> Total execution time: 0.0153
+INFO - 2016-04-12 23:19:05 --> Config Class Initialized
+INFO - 2016-04-12 23:19:05 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:19:05 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:19:05 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:19:05 --> URI Class Initialized
+INFO - 2016-04-12 23:19:05 --> Router Class Initialized
+INFO - 2016-04-12 23:19:05 --> Output Class Initialized
+INFO - 2016-04-12 23:19:05 --> Security Class Initialized
+DEBUG - 2016-04-12 23:19:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:19:05 --> Input Class Initialized
+INFO - 2016-04-12 23:19:05 --> Language Class Initialized
+INFO - 2016-04-12 23:19:05 --> Loader Class Initialized
+INFO - 2016-04-12 23:19:05 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:19:05 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:19:05 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:19:05 --> Controller Class Initialized
+INFO - 2016-04-12 23:19:05 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:19:05 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:19:05 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:19:05 --> Model Class Initialized
+INFO - 2016-04-12 23:19:05 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:19:05 --> Model Class Initialized
+INFO - 2016-04-12 23:19:05 --> Model Class Initialized
+INFO - 2016-04-12 23:19:05 --> Model Class Initialized
+INFO - 2016-04-12 23:19:05 --> Model Class Initialized
+INFO - 2016-04-12 23:19:05 --> Model Class Initialized
+INFO - 2016-04-12 23:19:05 --> Model Class Initialized
+INFO - 2016-04-12 23:19:05 --> Model Class Initialized
+DEBUG - 2016-04-12 23:19:05 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:19:05 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:19:05 --> Table Class Initialized
+INFO - 2016-04-12 23:19:05 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/booking.php
+INFO - 2016-04-12 23:19:05 --> Final output sent to browser
+DEBUG - 2016-04-12 23:19:05 --> Total execution time: 0.0127
+INFO - 2016-04-12 23:19:08 --> Config Class Initialized
+INFO - 2016-04-12 23:19:08 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:19:08 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:19:08 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:19:08 --> URI Class Initialized
+INFO - 2016-04-12 23:19:08 --> Router Class Initialized
+INFO - 2016-04-12 23:19:08 --> Output Class Initialized
+INFO - 2016-04-12 23:19:08 --> Security Class Initialized
+DEBUG - 2016-04-12 23:19:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:19:08 --> Input Class Initialized
+INFO - 2016-04-12 23:19:08 --> Language Class Initialized
+INFO - 2016-04-12 23:19:08 --> Loader Class Initialized
+INFO - 2016-04-12 23:19:08 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:19:08 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:19:08 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:19:08 --> Controller Class Initialized
+INFO - 2016-04-12 23:19:08 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:19:08 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:19:08 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:19:08 --> Model Class Initialized
+INFO - 2016-04-12 23:19:08 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:19:08 --> Model Class Initialized
+INFO - 2016-04-12 23:19:08 --> Model Class Initialized
+INFO - 2016-04-12 23:19:08 --> Model Class Initialized
+INFO - 2016-04-12 23:19:08 --> Model Class Initialized
+INFO - 2016-04-12 23:19:08 --> Model Class Initialized
+INFO - 2016-04-12 23:19:08 --> Model Class Initialized
+INFO - 2016-04-12 23:19:08 --> Model Class Initialized
+DEBUG - 2016-04-12 23:19:08 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:19:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:19:08 --> Table Class Initialized
+DEBUG - 2016-04-12 23:19:08 --> Table class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:19:08 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/view_booking.php
+INFO - 2016-04-12 23:19:08 --> Final output sent to browser
+DEBUG - 2016-04-12 23:19:08 --> Total execution time: 0.0111
+INFO - 2016-04-12 23:19:54 --> Config Class Initialized
+INFO - 2016-04-12 23:19:54 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:19:54 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:19:54 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:19:54 --> URI Class Initialized
+INFO - 2016-04-12 23:19:54 --> Router Class Initialized
+INFO - 2016-04-12 23:19:54 --> Output Class Initialized
+INFO - 2016-04-12 23:19:54 --> Security Class Initialized
+DEBUG - 2016-04-12 23:19:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:19:54 --> Input Class Initialized
+INFO - 2016-04-12 23:19:54 --> Language Class Initialized
+INFO - 2016-04-12 23:19:54 --> Loader Class Initialized
+INFO - 2016-04-12 23:19:54 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:19:54 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:19:54 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:19:54 --> Controller Class Initialized
+INFO - 2016-04-12 23:19:54 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:19:54 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:19:54 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:19:54 --> Model Class Initialized
+INFO - 2016-04-12 23:19:54 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:19:54 --> Model Class Initialized
+INFO - 2016-04-12 23:19:54 --> Model Class Initialized
+INFO - 2016-04-12 23:19:54 --> Model Class Initialized
+INFO - 2016-04-12 23:19:54 --> Model Class Initialized
+INFO - 2016-04-12 23:19:54 --> Model Class Initialized
+INFO - 2016-04-12 23:19:54 --> Model Class Initialized
+INFO - 2016-04-12 23:19:54 --> Model Class Initialized
+DEBUG - 2016-04-12 23:19:54 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:19:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:19:54 --> Table Class Initialized
+DEBUG - 2016-04-12 23:19:54 --> Table class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:19:54 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/view_booking.php
+INFO - 2016-04-12 23:19:54 --> Final output sent to browser
+DEBUG - 2016-04-12 23:19:54 --> Total execution time: 0.0195
+INFO - 2016-04-12 23:20:04 --> Config Class Initialized
+INFO - 2016-04-12 23:20:04 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:20:04 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:20:04 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:20:04 --> URI Class Initialized
+INFO - 2016-04-12 23:20:04 --> Router Class Initialized
+INFO - 2016-04-12 23:20:04 --> Output Class Initialized
+INFO - 2016-04-12 23:20:04 --> Security Class Initialized
+DEBUG - 2016-04-12 23:20:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:20:04 --> Input Class Initialized
+INFO - 2016-04-12 23:20:04 --> Language Class Initialized
+INFO - 2016-04-12 23:20:04 --> Loader Class Initialized
+INFO - 2016-04-12 23:20:04 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:20:04 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:20:04 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:20:04 --> Controller Class Initialized
+INFO - 2016-04-12 23:20:04 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:20:04 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:20:04 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:20:04 --> Model Class Initialized
+INFO - 2016-04-12 23:20:04 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:20:04 --> Model Class Initialized
+INFO - 2016-04-12 23:20:04 --> Model Class Initialized
+INFO - 2016-04-12 23:20:04 --> Model Class Initialized
+INFO - 2016-04-12 23:20:04 --> Model Class Initialized
+INFO - 2016-04-12 23:20:04 --> Model Class Initialized
+INFO - 2016-04-12 23:20:04 --> Model Class Initialized
+INFO - 2016-04-12 23:20:04 --> Model Class Initialized
+DEBUG - 2016-04-12 23:20:04 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:20:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:20:04 --> Table Class Initialized
+INFO - 2016-04-12 23:20:04 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/booking.php
+INFO - 2016-04-12 23:20:04 --> Final output sent to browser
+DEBUG - 2016-04-12 23:20:04 --> Total execution time: 0.0108
+INFO - 2016-04-12 23:20:29 --> Config Class Initialized
+INFO - 2016-04-12 23:20:29 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:20:29 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:20:29 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:20:29 --> URI Class Initialized
+INFO - 2016-04-12 23:20:29 --> Router Class Initialized
+INFO - 2016-04-12 23:20:29 --> Output Class Initialized
+INFO - 2016-04-12 23:20:29 --> Security Class Initialized
+DEBUG - 2016-04-12 23:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:20:29 --> Input Class Initialized
+INFO - 2016-04-12 23:20:29 --> Language Class Initialized
+INFO - 2016-04-12 23:20:29 --> Loader Class Initialized
+INFO - 2016-04-12 23:20:29 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:20:29 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:20:29 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:20:29 --> Controller Class Initialized
+INFO - 2016-04-12 23:20:29 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:20:29 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:20:29 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:20:29 --> Model Class Initialized
+INFO - 2016-04-12 23:20:29 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:20:29 --> Model Class Initialized
+INFO - 2016-04-12 23:20:29 --> Model Class Initialized
+INFO - 2016-04-12 23:20:29 --> Model Class Initialized
+INFO - 2016-04-12 23:20:29 --> Model Class Initialized
+INFO - 2016-04-12 23:20:29 --> Model Class Initialized
+INFO - 2016-04-12 23:20:29 --> Model Class Initialized
+INFO - 2016-04-12 23:20:29 --> Model Class Initialized
+DEBUG - 2016-04-12 23:20:29 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:20:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:20:29 --> Table Class Initialized
+INFO - 2016-04-12 23:20:29 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/booking.php
+INFO - 2016-04-12 23:20:29 --> Final output sent to browser
+DEBUG - 2016-04-12 23:20:29 --> Total execution time: 0.0155
+INFO - 2016-04-12 23:20:36 --> Config Class Initialized
+INFO - 2016-04-12 23:20:36 --> Hooks Class Initialized
+DEBUG - 2016-04-12 23:20:36 --> UTF-8 Support Enabled
+INFO - 2016-04-12 23:20:36 --> Utf8 Class Initialized
+INFO - 2016-04-12 23:20:36 --> URI Class Initialized
+INFO - 2016-04-12 23:20:36 --> Router Class Initialized
+INFO - 2016-04-12 23:20:36 --> Output Class Initialized
+INFO - 2016-04-12 23:20:36 --> Security Class Initialized
+DEBUG - 2016-04-12 23:20:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-12 23:20:36 --> Input Class Initialized
+INFO - 2016-04-12 23:20:36 --> Language Class Initialized
+INFO - 2016-04-12 23:20:36 --> Loader Class Initialized
+INFO - 2016-04-12 23:20:36 --> Helper loaded: url_helper
+INFO - 2016-04-12 23:20:36 --> Helper loaded: menu_helper
+INFO - 2016-04-12 23:20:36 --> Helper loaded: form_helper
+INFO - 2016-04-12 23:20:36 --> Controller Class Initialized
+INFO - 2016-04-12 23:20:36 --> Helper loaded: security_helper
+INFO - 2016-04-12 23:20:36 --> Session: Class initialized using 'files' driver.
+INFO - 2016-04-12 23:20:36 --> Form Validation Class Initialized
+INFO - 2016-04-12 23:20:36 --> Model Class Initialized
+INFO - 2016-04-12 23:20:36 --> Database Driver Class Initialized
+INFO - 2016-04-12 23:20:36 --> Model Class Initialized
+INFO - 2016-04-12 23:20:36 --> Model Class Initialized
+INFO - 2016-04-12 23:20:36 --> Model Class Initialized
+INFO - 2016-04-12 23:20:36 --> Model Class Initialized
+INFO - 2016-04-12 23:20:36 --> Model Class Initialized
+INFO - 2016-04-12 23:20:36 --> Model Class Initialized
+INFO - 2016-04-12 23:20:36 --> Model Class Initialized
+DEBUG - 2016-04-12 23:20:36 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2016-04-12 23:20:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:20:36 --> Table Class Initialized
+DEBUG - 2016-04-12 23:20:36 --> Table class already loaded. Second attempt ignored.
+INFO - 2016-04-12 23:20:36 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/user/view_booking.php
+INFO - 2016-04-12 23:20:36 --> Final output sent to browser
+DEBUG - 2016-04-12 23:20:36 --> Total execution time: 0.0201
