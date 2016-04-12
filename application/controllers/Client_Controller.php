@@ -15,6 +15,7 @@ class Client_Controller extends Check_Logged
 		$this->load->model('Category_Model');
 		$this->load->model('Venue_Model');
 		$this->load->model('Decoration_Model');
+		$this->load->model('Event_Model');
 		$this->load->model('Fooditem_Model');
  		$this->load->helper('form');
  		$this->load->helper('url');
@@ -137,6 +138,70 @@ class Client_Controller extends Check_Logged
 		}
 	}
 
+    public function view_booking()
+    {
+        $client_id = $_SESSION['id'];
+        $where= ['clients_id' => $client_id];
+        $condition = [
+            ['venues.id','events.venues_id']
+        ];
+
+        $data  =$this->Event_Model->get_join_where(['venues'], $where, $condition);
+
+
+        $this->load->library('table');
+        $this->table->set_heading('Name',  'starting date', 'ending date', 'venue', 'peoples',anchor(base_url(uri_string().'/add'),'add',['class' => 'button normal-button']));
+        if(!empty($data))
+        {
+//            var_dump($data);
+            foreach ($data['all'] as $key => $value)
+            {
+                $this->table->add_row
+                (
+                    anchor(base_url(uri_string().'/addfoods/'.$value->event_id), $value->name),
+                    $value->start_date,
+                    $value->end_date,
+//                    $value->venue,
+                    $value->noof_people
+//                    '<a href="'. base_url('dashboard/decoration/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
+                );
+            }
+            $template = [
+                'table_open'            => '<table id="testimonial" class = "table">',
+                'thead_open'            => '<thead class="header">',
+                'thead_close'           => '</thead>',
+
+                'heading_row_start'     => '<tr>',
+                'heading_row_end'       => '</tr>',
+                'heading_cell_start'    => '<th>',
+                'heading_cell_end'      => '</th>',
+
+                'tbody_open'            => '<tbody>',
+                'tbody_close'           => '</tbody>',
+
+                'row_start'             => '<tr>',
+                'row_end'               => '</tr>',
+                'cell_start'            => '<td>',
+                'cell_end'              => '</td>',
+
+                'row_alt_start'         => '<tr>',
+                'row_alt_end'           => '</tr>',
+                'cell_alt_start'        => '<td>',
+                'cell_alt_end'          => '</td>',
+
+                'table_close'           => '</table>'
+            ];
+            $this->table->set_template($template);
+            $data['booking'] = $this->table->generate();
+
+        } else {
+            $data['message'] = 'No data Found';
+        }
+
+        $this->load->view('user/view_booking', $data);
+
+    }
+
 
     public function book()
     {
@@ -172,21 +237,21 @@ class Client_Controller extends Check_Logged
 
     public function book_submit()
     {
-        $this->form_validation->set_rules('name','Name','required');
-        $this->form_validation->set_rules('description','Description');
-        $this->form_validation->set_rules('start_time','Start time','required');
-        $this->form_validation->set_rules('start_date','Strat date','required');
-        $this->form_validation->set_rules('end_time','End Time','required');
-        $this->form_validation->set_rules('end_date','End date','required');
-        $this->form_validation->set_rules('people','No Of people','required');
-
-
-        if ($this->form_validation->run() == FALSE)
-        {
-            $this->load->view('user/booking');
-        }
-        else
-        {
+//        $this->form_validation->set_rules('name','Name','required');
+//        $this->form_validation->set_rules('description','Description');
+//        $this->form_validation->set_rules('start_time','Start time','required');
+//        $this->form_validation->set_rules('start_date','Strat date','required');
+//        $this->form_validation->set_rules('end_time','End Time','required');
+//        $this->form_validation->set_rules('end_date','End date','required');
+//        $this->form_validation->set_rules('people','No Of people','required');
+//
+//
+//        if ($this->form_validation->run() == FALSE)
+//        {
+//            $this->load->view('user/booking');
+//        }
+//        else
+//        {
             $name = $this->input->post('name');
             $description = $this->input->post('description');
             $start_time = $this->input->post('start_time');
@@ -212,34 +277,65 @@ class Client_Controller extends Check_Logged
                 'venues_id' => $venue_id,
 //                'payment_id' => $payment_id,
                 'categories_id' => $categories_id,
-                'client_id' => $client_id,
+                'clients_id' => $client_id,
                 'decaration_id' => $decaration_id
             ];
-            var_dump($data);
-//            $event_id = $this->Event_Model->insert_event($data);
-//            if ($event_id)
-//            {
-//                $data = [
-//                    'name' => $name,
-//                    'event_id' => $event_id,
-//                ];
-//
-//                $booking_id = $this->Booking_Model->insert_booking($data);
-//
-//                if ($booking_id != null) {
-//                    $data['message'] = '<script type="text/javascript">
-//                                    var r = alert("successful!");
-//                                    if (r == true) {
-//                                        window.location = "' . base_url('event/add') . '";
-//                                    } else {
-//                                        window.location = "' . base_url('event/add') . '";
-//                                    }
-//                                </script>';
-//                $this->load->view('user/booking',$data);
-//                }
-//            }
+            $event_id = $this->Event_Model->insert_event($data);
+            if ($event_id)
+            {
+                $data = [
+                    'name' => $name,
+                    'events_id' => $event_id,
+                ];
+
+                $booking_id = $this->Booking_Model->insert_booking($data);
+
+                if ($booking_id != null) {
+                    $data['message'] = '<script type="text/javascript">
+                                    var r = alert("successful!");
+                                    if (r == true) {
+                                        window.location = "' . base_url($_SESSION['username'].'/booking') . '";
+                                    } else {
+                                        window.location = "' . base_url($_SESSION['username'].'/booking') . '";
+                                    }
+                                </script>';
+                $this->load->view('user/booking',$data);
+                }
+            }
+
+//        }
+    }
+
+
+    public function add_food()
+    {
+        /*get all food items*/
+
+        $food = $this->Fooditem_Model->view_item();
+
+        if ($food != false) {
+            $data['food'] = $food;
+        }
+        $data['event_id'] = $this->uri->segment(4);
+
+        $this->load->view('user/add_food',$data);
+    }
+
+    public function add_food_submit()
+    {
+
+        $type = $this->input->post('type');
+        $item_id = $this->input->post('item');
+        $event_id = $this->input->post('event_id');
+        if (is_array($item_id)) {
 
         }
+
+//        $data = [
+//            'type' => $type,
+//            'food_items_id' => $item_id,
+//            'events_id' => $event_id,
+//        ];
     }
 
 	public function view()

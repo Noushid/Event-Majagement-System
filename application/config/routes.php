@@ -72,7 +72,11 @@ $route['sign-up/submit'] = 'Client_Controller/add_client';
 
 $route['(:any)/logout'] = 'client_Controller/logout';
 $route['(:any)/home'] = 'client_Controller/home';
-$route['(:any)/booking'] = 'client_Controller/book';
+$route['(:any)/booking'] = 'client_Controller/view_booking';
+$route['(:any)/booking/addfoods/(:num)'] = 'client_Controller/add_food/$1';
+$route['(:any)/booking/addfoods/submit'] = 'client_Controller/add_food_submit';
+
+$route['(:any)/booking/add'] = 'client_Controller/book';
 $route['(:any)/booking/submit'] = 'client_Controller/book_submit';
 
 
