@@ -100,13 +100,14 @@
     </nav>
         <div>
             <div>
+
                 <form action="<?php echo base_url($_SESSION['username'].'/booking/addfoods/submit')?>" method="POST" >
                     <div>
                         <label for="type">type</label>
-                        <select name="food" id="food">
+                        <select name="type" id="food">
                             <option value="breakfast">Breakefast</option>
                             <option value="lunch">Lunch</option>
-                            <option value="Dinner">Other</option>
+                            <option value="Dinner">Dinner</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -128,7 +129,7 @@
                             </select>
                         </div>
                     </div>
-                    <input type="hidden" name="event_id" id="event_id" value="<?php $event_id?>"/>
+                    <input type="hidden" name="event_id" id="event_id" value="<?php echo $event_id?>"/>
 
 
 <!--                    <div class="multiselect">-->
@@ -170,10 +171,14 @@
 <!--                    </div>-->
                     <div>
                         <button class="btn btn-default">submit</button>
+                        <a href="<?php echo base_url($_SESSION['username'] . '/booking') ?>" class="btn btn-danger">back</a>
                     </div>
                 </form>
             </div>
         </div>
+    <?php if (isset($food_item)) {
+        echo $food_item;
+    }?>
 </div>
 </body>
 </html>

@@ -17,9 +17,10 @@ class Client_Controller extends Check_Logged
 		$this->load->model('Decoration_Model');
 		$this->load->model('Event_Model');
 		$this->load->model('Fooditem_Model');
+		$this->load->model('Foods_Model');
  		$this->load->helper('form');
  		$this->load->helper('url');
- 		$this->load->library(['form_validation', 'session']);
+ 		$this->load->library(['form_validation', 'session', 'table']);
  		$this->load->helper('security');
 	}
 	public function index()
@@ -309,6 +310,63 @@ class Client_Controller extends Check_Logged
 
     public function add_food()
     {
+
+        $event_id = $this->uri->segment(4);
+        $where = ['events.id' => $event_id ];
+        $condition = [
+            [
+                'events.id',
+                'foods.events_id'
+            ],
+            [
+                'food_items.id',
+                'foods.food_items_id'
+            ]
+        ];
+
+        $food_item = $this->Foods_Model->view_join_where(['events', 'food_items'],$where, $condition , 'FULL' , '', 'events.id',  '', '',[]);
+        $this->table->set_heading('type', 'name');
+        if(!empty($food_item))
+        {
+            foreach ($food_item['all'] as $key => $value)
+            {
+                $this->table->add_row
+                (
+                    $value->type,
+                    $value->name
+//                    '<a href="'. base_url('dashboard/client/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
+                );
+            }
+            $template = [
+                'table_open'            => '<table id="testimonial" class = "table">',
+                'thead_open'            => '<thead class="header">',
+                'thead_close'           => '</thead>',
+
+                'heading_row_start'     => '<tr>',
+                'heading_row_end'       => '</tr>',
+                'heading_cell_start'    => '<th>',
+                'heading_cell_end'      => '</th>',
+
+                'tbody_open'            => '<tbody>',
+                'tbody_close'           => '</tbody>',
+
+                'row_start'             => '<tr>',
+                'row_end'               => '</tr>',
+                'cell_start'            => '<td>',
+                'cell_end'              => '</td>',
+
+                'row_alt_start'         => '<tr>',
+                'row_alt_end'           => '</tr>',
+                'cell_alt_start'        => '<td>',
+                'cell_alt_end'          => '</td>',
+
+                'table_close'           => '</table>'
+            ];
+            $this->table->set_template($template);
+            $data['food_item'] = $this->table->generate();
+
+        }
+
         /*get all food items*/
 
         $food = $this->Fooditem_Model->view_item();
@@ -316,7 +374,7 @@ class Client_Controller extends Check_Logged
         if ($food != false) {
             $data['food'] = $food;
         }
-        $data['event_id'] = $this->uri->segment(4);
+        $data['event_id'] = $event_id;
 
         $this->load->view('user/add_food',$data);
     }
@@ -328,6 +386,16 @@ class Client_Controller extends Check_Logged
         $item_id = $this->input->post('item');
         $event_id = $this->input->post('event_id');
         if (is_array($item_id)) {
+            foreach ($item_id as $value) {
+                $data = [
+                    'type' => $type,
+                    'food_items_id' => $value,
+                    'events_id' => $event_id,
+                ];
+                if ($this->Foods_Model->add($data));
+            }
+            redirect($_SERVER['HTTP_REFERER']);
+
 
         }
 
