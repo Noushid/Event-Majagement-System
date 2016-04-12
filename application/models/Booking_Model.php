@@ -25,6 +25,11 @@ class Booking_Model extends My_Model
 		return $this->get_all();
 	}
 
+    public function get_where($where)
+    {
+        return $this->get($where);
+    }
+
 
 
 

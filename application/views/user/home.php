@@ -44,7 +44,7 @@
         </div>
     </nav>
 
-    <h2>welcome</h2>
+<!--    <h2>welcome</h2>-->
     <div class="col-md-8">
 
     </div>

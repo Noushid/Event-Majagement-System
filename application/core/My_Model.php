@@ -149,7 +149,7 @@ class My_Model extends CI_Model
         }
         $this->db->select($fields);
         $query = $this->db->get();
-//        var_dump($this->db->get_compiled_select($this->table));
+//        var_dump($this->db->get_compiled_select());
         if ($query->num_rows() >= 0) {
             $result = [
                 'last' => $query->last_row(),
