@@ -137,5 +137,9 @@ class Dashboard extends Check_Logged
             $this->session->set_userdata($userdata);
             redirect(base_url('dashboard'));
         }
+        else
+        {
+            redirect(base_url('admin-log'));
+        }
     }
 }
