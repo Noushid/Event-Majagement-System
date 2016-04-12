@@ -81,6 +81,7 @@ class My_Model extends CI_Model
             $this->db->where($where);
             $this->db->limit($limit, $start);
             $query = $this->db->get($this->table);
+            // var_dump($this->db->get_compiled_select($this->table));
             if ($query->num_rows() > 0)
                 return $query->result();
 

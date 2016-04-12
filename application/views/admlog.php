@@ -78,13 +78,13 @@
 
 	<section id="content">
 	
-	<form action="" >
+	<form action="<?php echo base_url('admin-log/verify'); ?>" method="POST">
         <h1>Admin login</h1>
          <div>
-      		<input type="text" placeholder="Username" required="" id="username">
+      		<input type="text" placeholder="Username" required="" id="username" name="username">
          </div>
          <div>
-            <input type="password" placeholder="Password" required="" id="password">
+            <input type="password" placeholder="Password" required="" id="password" name="password">
          </div>
           <div>
             <input type="submit" value="Log in"></a>

@@ -135,5 +135,12 @@ $route['dashboard/foods'] = 'Food_ItemController/view_item';
 $route['dashboard/booking/add'] = 'Booking_Controller';
 $route['dashboard/booking/delete/(:any)'] ='Booking_Controller/delete/$1'; 
 $route['dashboard/booking'] = 'Booking_Controller/view_booking';
+
+
+/*admin*/
+
+$route['admin-log/verify'] = 'Dashboard/verify';
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

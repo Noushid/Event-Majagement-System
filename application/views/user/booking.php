@@ -114,7 +114,7 @@
             <div class="">
                 <div class="form-group col-md-5">
                     <label for="name">Name</label>
-                    <input class="form-control" type="text" name="name" ><br>
+                    <input class="form-control" type="text" name="name" required=""><br>
                 </div>
 
                 <div class="form-group col-md-2">
@@ -163,25 +163,25 @@
 
                 <div class="form-group col-md-2 ">
                     <label for="start_date">Start Date</label>
-                    <input type="date" class="form-control" name="start_date" id="startdate"  placeholder="yyyy/mm/dd"><br>
+                    <input type="date" class="form-control" name="start_date" id="startdate"  placeholder="yyyy/mm/dd"required=""><br>
                 </div>
 
                 <div class="form-group col-md-2">
                     <label for="start_time">Start Time</label>
-                    <input type="text" class="form-control" name="start_time"  id="enddate"placeholder="hh/mm"><br>
+                    <input type="text" class="form-control" name="start_time"  id="enddate"placeholder="hh/mm"required=""><br>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="end_date">End Date</label>
-                    <input type="text" class="form-control" name="end_date"  placeholder="yyyy/mm/dd"><br>
+                    <input type="text" class="form-control" name="end_date"  placeholder="yyyy/mm/dd"required=""><br>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="end_time">End Time</label>
-                    <input type="text" class="form-control" name="end_time"  placeholder="hh/mm"><br>
+                    <input type="text" class="form-control" name="end_time"  placeholder="hh/mm"required=""><br>
                 </div>
 
                 <div class="form-group col-md-2">
                     <label for="no_of_pepole">No Of Pepole</label>
-                    <input class="form-control" type="text" name="people" ><br>
+                    <input class="form-control" type="text" name="people" required=""><br>
                 </div>
 
 <!--                <div class="multiselect">-->
@@ -242,7 +242,7 @@
 <!---->
                 <div class="col-md-12">
                     <button  class="btn btn-default" name="button">Submit</button>
-                    <button  class="btn btn-danger" name="reset">reset</button>
+                    <input type="reset" name="reset" id="reset" class="btn btn-danger"></input>
                 </div>
 
             </div>

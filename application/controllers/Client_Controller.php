@@ -70,13 +70,18 @@ class Client_Controller extends Check_Logged
             $this->session->set_userdata($userdata);
             redirect(base_url($_SESSION['username'] . '/home'));
         }
+        else
+        {
+            redirect(base_url('login'));
+
+        }
     }
 
     public function logout()
     {
         $this->session->unset_userdata();
         $this->session->sess_destroy();
-        redirect(base_url('login'));
+        redirect(base_url('home'));
     }
 
 	public function add_client()
@@ -151,10 +156,9 @@ class Client_Controller extends Check_Logged
 
 
         $this->load->library('table');
-        $this->table->set_heading('Name',  'starting date', 'ending date', 'venue', 'peoples',anchor(base_url(uri_string().'/add'),'add',['class' => 'button normal-button']));
+        $this->table->set_heading('Name',  'starting date', 'ending date', 'peoples', 'Estimated coast' ,anchor(base_url(uri_string().'/add'),'add',['class' => 'button normal-button']));
         if(!empty($data))
         {
-//            var_dump($data);
             foreach ($data['all'] as $key => $value)
             {
                 $this->table->add_row
@@ -162,8 +166,10 @@ class Client_Controller extends Check_Logged
                     anchor(base_url(uri_string().'/addfoods/'.$value->event_id), $value->name),
                     $value->start_date,
                     $value->end_date,
-//                    $value->venue,
-                    $value->noof_people
+                   // $value->venue,
+                    $value->noof_people,
+                    number_format((int)$value->noof_people*325)
+
 //                    '<a href="'. base_url('dashboard/decoration/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
                 );
             }
@@ -259,7 +265,7 @@ class Client_Controller extends Check_Logged
             $start_date = $this->input->post('start_date');
             $end_time = $this->input->post('end_time');
             $end_date = $this->input->post('end_date');
-            $people= $this->input->post('pepole');
+            $people= $this->input->post('people');
 
             $categories_id = $this->input->post('category');
             $decaration_id = $this->input->post('decoration');
@@ -324,7 +330,7 @@ class Client_Controller extends Check_Logged
             ]
         ];
 
-        $food_item = $this->Foods_Model->view_join_where(['events', 'food_items'],$where, $condition , 'FULL' , '', 'events.id',  '', '',[]);
+        $food_item = $this->Foods_Model->view_join_where(['events', 'food_items'],$where, $condition , 'FULL' , '', '',  '', '',[]);
         $this->table->set_heading('type', 'name');
         if(!empty($food_item))
         {
