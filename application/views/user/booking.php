@@ -70,11 +70,11 @@
 <script type="text/javascript">
     $(function() {
         // $( "#startdate" ).datepicker();
-        $('#startdate').datepicker({ dateFormat: 'mm-dd-yy' }).val();
+        $('#startdate').datepicker({ dateFormat: 'yy-mm-dd' }).val();
     });
 
     $(function() {
-        $( "#enddate" ).datepicker();
+        $('#enddate').datepicker({ dateFormat: 'yy-mm-dd' }).val();
     });
 </script>
 <div class="page-wrapper">
@@ -169,11 +169,11 @@
 
                 <div class="form-group col-md-2">
                     <label for="start_time">Start Time</label>
-                    <input type="text" class="form-control" name="start_time"  id="enddate"placeholder="hh/mm"required=""><br>
+                    <input type="text" class="form-control" name="start_time"  id="" placeholder="hh/mm"required=""><br>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="end_date">End Date</label>
-                    <input type="text" class="form-control" name="end_date"  placeholder="yyyy/mm/dd"required=""><br>
+                    <input type="text" class="form-control" name="end_date" id="enddate" placeholder="yyyy/mm/dd"required=""><br>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="end_time">End Time</label>
