@@ -113,7 +113,7 @@ function dashboard_menu($current)
         'booking' => [
             'title' => 'booking',
             'icon' => 'fa-folder',
-            'link' => 'booking'
+            'link' => 'bookings'
         ],
         'foods' => [
             'title' => 'foods',

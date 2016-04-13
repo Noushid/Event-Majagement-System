@@ -140,6 +140,9 @@ $route['dashboard/booking'] = 'Booking_Controller/view_booking';
 $route['dashboard/event'] = 'Dashboard/view_events';
 
 
+$route['dashboard/bookings'] = 'Dashboard/view_booking';
+
+
 /*admin*/
 
 $route['admin-log/verify'] = 'Dashboard/verify';

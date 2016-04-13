@@ -208,4 +208,68 @@ class Dashboard extends Check_Logged
             var_dump('jhbjhbj');
         $this->load->view('admin/view_event',$data);
     }
+
+
+    public function view_booking()
+    {
+         $client_id = $_SESSION['id'];
+        // $where= ['clients_id' => $client_id];
+        $condition = [
+            ['venues.id','events.venues_id']
+        ];
+
+        $data  =$this->Event_Model->get_join_where(['venues'], [], $condition);
+
+        $this->load->library('table');
+        $this->table->set_heading('Name',  'starting date', 'ending date', 'peoples', 'Estimated coast' );
+        if(!empty($data))
+        {
+            foreach ($data['all'] as $key => $value)
+            {
+                $this->table->add_row
+                (
+                    anchor(base_url(uri_string().'/addfoods/'.$value->event_id), $value->name),
+                    $value->start_date,
+                    $value->end_date,
+                   // $value->venue,
+                    $value->noof_people,
+                    number_format((int)$value->noof_people*325)
+
+//                    '<a href="'. base_url('dashboard/decoration/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
+                );
+            }
+            $template = [
+                'table_open'            => '<table id="testimonial" class = "table">',
+                'thead_open'            => '<thead class="header">',
+                'thead_close'           => '</thead>',
+
+                'heading_row_start'     => '<tr>',
+                'heading_row_end'       => '</tr>',
+                'heading_cell_start'    => '<th>',
+                'heading_cell_end'      => '</th>',
+
+                'tbody_open'            => '<tbody>',
+                'tbody_close'           => '</tbody>',
+
+                'row_start'             => '<tr>',
+                'row_end'               => '</tr>',
+                'cell_start'            => '<td>',
+                'cell_end'              => '</td>',
+
+                'row_alt_start'         => '<tr>',
+                'row_alt_end'           => '</tr>',
+                'cell_alt_start'        => '<td>',
+                'cell_alt_end'          => '</td>',
+
+                'table_close'           => '</table>'
+            ];
+            $this->table->set_template($template);
+            $data['booking'] = $this->table->generate();
+
+        } else {
+            $data['message'] = 'No data Found';
+        }
+
+        $this->load->view('admin/view_booking', $data);
+    }
 }
