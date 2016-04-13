@@ -4414,3 +4414,155 @@ INFO - 2016-04-13 06:54:57 --> Controller Class Initialized
 INFO - 2016-04-13 06:54:57 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
 INFO - 2016-04-13 06:54:57 --> Final output sent to browser
 DEBUG - 2016-04-13 06:54:57 --> Total execution time: 0.0071
+INFO - 2016-04-13 07:13:44 --> Config Class Initialized
+INFO - 2016-04-13 07:13:44 --> Hooks Class Initialized
+DEBUG - 2016-04-13 07:13:44 --> UTF-8 Support Enabled
+INFO - 2016-04-13 07:13:44 --> Utf8 Class Initialized
+INFO - 2016-04-13 07:13:44 --> URI Class Initialized
+INFO - 2016-04-13 07:13:44 --> Router Class Initialized
+INFO - 2016-04-13 07:13:44 --> Output Class Initialized
+INFO - 2016-04-13 07:13:44 --> Security Class Initialized
+DEBUG - 2016-04-13 07:13:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-13 07:13:44 --> Input Class Initialized
+INFO - 2016-04-13 07:13:44 --> Language Class Initialized
+INFO - 2016-04-13 07:13:44 --> Loader Class Initialized
+INFO - 2016-04-13 07:13:44 --> Helper loaded: url_helper
+INFO - 2016-04-13 07:13:44 --> Helper loaded: menu_helper
+INFO - 2016-04-13 07:13:44 --> Helper loaded: form_helper
+INFO - 2016-04-13 07:13:44 --> Controller Class Initialized
+INFO - 2016-04-13 07:13:44 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
+INFO - 2016-04-13 07:13:44 --> Final output sent to browser
+DEBUG - 2016-04-13 07:13:44 --> Total execution time: 0.0079
+INFO - 2016-04-13 07:14:28 --> Config Class Initialized
+INFO - 2016-04-13 07:14:28 --> Hooks Class Initialized
+DEBUG - 2016-04-13 07:14:28 --> UTF-8 Support Enabled
+INFO - 2016-04-13 07:14:28 --> Utf8 Class Initialized
+INFO - 2016-04-13 07:14:28 --> URI Class Initialized
+INFO - 2016-04-13 07:14:28 --> Router Class Initialized
+INFO - 2016-04-13 07:14:28 --> Output Class Initialized
+INFO - 2016-04-13 07:14:28 --> Security Class Initialized
+DEBUG - 2016-04-13 07:14:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-13 07:14:28 --> Input Class Initialized
+INFO - 2016-04-13 07:14:28 --> Language Class Initialized
+INFO - 2016-04-13 07:14:28 --> Loader Class Initialized
+INFO - 2016-04-13 07:14:28 --> Helper loaded: url_helper
+INFO - 2016-04-13 07:14:28 --> Helper loaded: menu_helper
+INFO - 2016-04-13 07:14:28 --> Helper loaded: form_helper
+INFO - 2016-04-13 07:14:28 --> Controller Class Initialized
+INFO - 2016-04-13 07:14:28 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
+INFO - 2016-04-13 07:14:28 --> Final output sent to browser
+DEBUG - 2016-04-13 07:14:28 --> Total execution time: 0.0053
+INFO - 2016-04-13 07:14:53 --> Config Class Initialized
+INFO - 2016-04-13 07:14:53 --> Hooks Class Initialized
+DEBUG - 2016-04-13 07:14:53 --> UTF-8 Support Enabled
+INFO - 2016-04-13 07:14:53 --> Utf8 Class Initialized
+INFO - 2016-04-13 07:14:53 --> URI Class Initialized
+INFO - 2016-04-13 07:14:53 --> Router Class Initialized
+INFO - 2016-04-13 07:14:53 --> Output Class Initialized
+INFO - 2016-04-13 07:14:53 --> Security Class Initialized
+DEBUG - 2016-04-13 07:14:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-13 07:14:53 --> Input Class Initialized
+INFO - 2016-04-13 07:14:53 --> Language Class Initialized
+INFO - 2016-04-13 07:14:53 --> Loader Class Initialized
+INFO - 2016-04-13 07:14:53 --> Helper loaded: url_helper
+INFO - 2016-04-13 07:14:53 --> Helper loaded: menu_helper
+INFO - 2016-04-13 07:14:53 --> Helper loaded: form_helper
+INFO - 2016-04-13 07:14:53 --> Controller Class Initialized
+INFO - 2016-04-13 07:14:53 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
+INFO - 2016-04-13 07:14:53 --> Final output sent to browser
+DEBUG - 2016-04-13 07:14:53 --> Total execution time: 0.0053
+INFO - 2016-04-13 07:14:53 --> Config Class Initialized
+INFO - 2016-04-13 07:14:53 --> Hooks Class Initialized
+DEBUG - 2016-04-13 07:14:53 --> UTF-8 Support Enabled
+INFO - 2016-04-13 07:14:53 --> Utf8 Class Initialized
+INFO - 2016-04-13 07:14:53 --> URI Class Initialized
+INFO - 2016-04-13 07:14:53 --> Router Class Initialized
+INFO - 2016-04-13 07:14:53 --> Output Class Initialized
+INFO - 2016-04-13 07:14:53 --> Security Class Initialized
+DEBUG - 2016-04-13 07:14:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-13 07:14:53 --> Input Class Initialized
+INFO - 2016-04-13 07:14:53 --> Language Class Initialized
+INFO - 2016-04-13 07:14:53 --> Loader Class Initialized
+INFO - 2016-04-13 07:14:53 --> Helper loaded: url_helper
+INFO - 2016-04-13 07:14:53 --> Helper loaded: menu_helper
+INFO - 2016-04-13 07:14:53 --> Helper loaded: form_helper
+INFO - 2016-04-13 07:14:53 --> Controller Class Initialized
+INFO - 2016-04-13 07:14:53 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
+INFO - 2016-04-13 07:14:53 --> Final output sent to browser
+DEBUG - 2016-04-13 07:14:53 --> Total execution time: 0.0074
+INFO - 2016-04-13 07:17:06 --> Config Class Initialized
+INFO - 2016-04-13 07:17:06 --> Hooks Class Initialized
+DEBUG - 2016-04-13 07:17:06 --> UTF-8 Support Enabled
+INFO - 2016-04-13 07:17:06 --> Utf8 Class Initialized
+INFO - 2016-04-13 07:17:06 --> URI Class Initialized
+INFO - 2016-04-13 07:17:06 --> Router Class Initialized
+INFO - 2016-04-13 07:17:06 --> Output Class Initialized
+INFO - 2016-04-13 07:17:06 --> Security Class Initialized
+DEBUG - 2016-04-13 07:17:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-13 07:17:06 --> Input Class Initialized
+INFO - 2016-04-13 07:17:06 --> Language Class Initialized
+INFO - 2016-04-13 07:17:06 --> Loader Class Initialized
+INFO - 2016-04-13 07:17:06 --> Helper loaded: url_helper
+INFO - 2016-04-13 07:17:06 --> Helper loaded: menu_helper
+INFO - 2016-04-13 07:17:06 --> Helper loaded: form_helper
+INFO - 2016-04-13 07:17:06 --> Controller Class Initialized
+INFO - 2016-04-13 07:17:06 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
+INFO - 2016-04-13 07:17:06 --> Final output sent to browser
+DEBUG - 2016-04-13 07:17:06 --> Total execution time: 0.0064
+INFO - 2016-04-13 07:20:23 --> Config Class Initialized
+INFO - 2016-04-13 07:20:23 --> Hooks Class Initialized
+DEBUG - 2016-04-13 07:20:23 --> UTF-8 Support Enabled
+INFO - 2016-04-13 07:20:23 --> Utf8 Class Initialized
+INFO - 2016-04-13 07:20:23 --> URI Class Initialized
+INFO - 2016-04-13 07:20:23 --> Router Class Initialized
+INFO - 2016-04-13 07:20:23 --> Output Class Initialized
+INFO - 2016-04-13 07:20:23 --> Security Class Initialized
+DEBUG - 2016-04-13 07:20:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-13 07:20:23 --> Input Class Initialized
+INFO - 2016-04-13 07:20:23 --> Language Class Initialized
+INFO - 2016-04-13 07:20:23 --> Loader Class Initialized
+INFO - 2016-04-13 07:20:23 --> Helper loaded: url_helper
+INFO - 2016-04-13 07:20:23 --> Helper loaded: menu_helper
+INFO - 2016-04-13 07:20:23 --> Helper loaded: form_helper
+INFO - 2016-04-13 07:20:23 --> Controller Class Initialized
+INFO - 2016-04-13 07:20:23 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
+INFO - 2016-04-13 07:20:23 --> Final output sent to browser
+DEBUG - 2016-04-13 07:20:23 --> Total execution time: 0.0081
+INFO - 2016-04-13 07:23:43 --> Config Class Initialized
+INFO - 2016-04-13 07:23:43 --> Hooks Class Initialized
+DEBUG - 2016-04-13 07:23:43 --> UTF-8 Support Enabled
+INFO - 2016-04-13 07:23:43 --> Utf8 Class Initialized
+INFO - 2016-04-13 07:23:43 --> URI Class Initialized
+INFO - 2016-04-13 07:23:43 --> Router Class Initialized
+INFO - 2016-04-13 07:23:43 --> Output Class Initialized
+INFO - 2016-04-13 07:23:43 --> Security Class Initialized
+DEBUG - 2016-04-13 07:23:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-13 07:23:43 --> Input Class Initialized
+INFO - 2016-04-13 07:23:43 --> Language Class Initialized
+INFO - 2016-04-13 07:23:43 --> Loader Class Initialized
+INFO - 2016-04-13 07:23:43 --> Helper loaded: url_helper
+INFO - 2016-04-13 07:23:43 --> Helper loaded: menu_helper
+INFO - 2016-04-13 07:23:43 --> Helper loaded: form_helper
+INFO - 2016-04-13 07:23:43 --> Controller Class Initialized
+INFO - 2016-04-13 07:23:43 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
+INFO - 2016-04-13 07:23:43 --> Final output sent to browser
+DEBUG - 2016-04-13 07:23:43 --> Total execution time: 0.0081
+INFO - 2016-04-13 07:23:59 --> Config Class Initialized
+INFO - 2016-04-13 07:23:59 --> Hooks Class Initialized
+DEBUG - 2016-04-13 07:23:59 --> UTF-8 Support Enabled
+INFO - 2016-04-13 07:23:59 --> Utf8 Class Initialized
+INFO - 2016-04-13 07:23:59 --> URI Class Initialized
+INFO - 2016-04-13 07:23:59 --> Router Class Initialized
+INFO - 2016-04-13 07:23:59 --> Output Class Initialized
+INFO - 2016-04-13 07:23:59 --> Security Class Initialized
+DEBUG - 2016-04-13 07:23:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-13 07:23:59 --> Input Class Initialized
+INFO - 2016-04-13 07:23:59 --> Language Class Initialized
+INFO - 2016-04-13 07:23:59 --> Loader Class Initialized
+INFO - 2016-04-13 07:23:59 --> Helper loaded: url_helper
+INFO - 2016-04-13 07:23:59 --> Helper loaded: menu_helper
+INFO - 2016-04-13 07:23:59 --> Helper loaded: form_helper
+INFO - 2016-04-13 07:23:59 --> Controller Class Initialized
+INFO - 2016-04-13 07:23:59 --> File loaded: /home/noushid/projects/collage projects/EMS/application/views/index.php
+INFO - 2016-04-13 07:23:59 --> Final output sent to browser
+DEBUG - 2016-04-13 07:23:59 --> Total execution time: 0.0077

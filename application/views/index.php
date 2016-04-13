@@ -9,13 +9,13 @@
 <link rel="stylesheet" href="<?php echo base_url('css/touchTouch.css') ?>">
 <link rel="stylesheet" href="<?php echo base_url('css/style.css') ?>">
 <script src="<?php echo base_url('js/jquery.js')?>"></script>
-<script src="<?php echo base_url('js/jquery-migrate-1.1.1.js') ?>></script>
+<script src="<?php echo base_url('js/jquery-migrate-1.1.1.js') ?>"></script>
 <script src="<?php echo base_url('js/jquery.easing.1.3.js') ?>"></script>
-<script src="<?php echo base_url('js/script.js') ?>></script>
+<script src="<?php echo base_url('js/script.js') ?>"></script>
 <script src="<?php echo base_url('js/superfish.js') ?>"></script>
-<script src="<?php echo base_url('js/jquery.equalheights.js') ?>></script>
+<script src="<?php echo base_url('js/jquery.equalheights.js') ?>"></script>
 <script src="<?php echo base_url('js/jquery.mobilemenu.js') ?>"></script>
-<script src="<?php echo base_url('js/tmStickUp.js') ?>></script>
+<script src="<?php echo base_url('js/tmStickUp.js') ?>"></script>
 <script src="<?php echo base_url('js/jquery.ui.totop.js') ?>"></script>
 <script src="<?php echo base_url('js/touchTouch.jquery.js') ?>"> </script>
 <script src="<?php echo base_url('js/jquery.shuffle-images.js') ?>"></script>
@@ -85,7 +85,7 @@
 <!--=====================
           Content
 ======================-->
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 14, 2014!</div>
+<section id="content"><div class="ic"></div>
   <div class="container">
     <div class="row">
       <div class="page1_block">
@@ -124,9 +124,9 @@
            <div data-si-mousemove-trigger="100" class="shuffle-me">
             <a href="#" class="info"><div class="shuffle_title">Birthday Parties <span>More</span></div></a>
             <div class="images">
-              <img src="<?php echo base_url('images/page1_img4.jpg' ) ?>" alt="">
-              <img src="<?php echo base_url('images/shuffle_1.jpg' ) ?>'" alt="">
-              <img src="<?php echo base_url('images/shuffle_2.jpg' ) ?>" alt="">
+              <img src="<?php echo base_url('images/page1_img4.jpg') ?>" alt="">
+              <img src="<?php echo base_url('images/shuffle_1.jpg') ?>" alt="">
+              <img src="<?php echo base_url('images/shuffle_2.jpg') ?>" alt="">
             </div></div>
         </div>
         <div class="grid_6">
@@ -134,7 +134,7 @@
             <a href="#" class="info"><div class="shuffle_title">Wedding Parties <span>More</span></div></a>
             <div class="images">
               <img src="<?php echo base_url('images/shuffle_2.jpg') ?>" alt="">
-              <img src="<?php echo base_url('images/page1_img4.jpg') ?>'" alt="">
+              <img src="<?php echo base_url('images/page1_img4.jpg') ?>" alt="">
               <img src="<?php echo base_url('images/shuffle_1.jpg') ?>" alt="">
             </div></div>
         </div>
