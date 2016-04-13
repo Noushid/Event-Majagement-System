@@ -63,8 +63,10 @@
 </head>
 <body>
 <script src="<?php echo base_url('js/date_picker.js')?>"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script> -->
+<script src="<?php echo base_url('js/jquery2.min.js')?>"></script>
+<script src="<?php echo base_url('js/jquery-ui2.min.js')?>"></script>
 
 <div class="page-wrapper">
     <div class="left-wrapper">
