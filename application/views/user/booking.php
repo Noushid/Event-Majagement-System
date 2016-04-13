@@ -6,6 +6,10 @@
     <title>event</title>
     <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('admin/css/styleapp.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/jquery.timepicker.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/jquery.timepicker.min.css');?>">
+
+
     <script type="text/javascript" src="<?php echo base_url('admin/js/appjs.js');?>"></script>
     <style>
         .multiselect {
@@ -63,8 +67,13 @@
 </head>
 <body>
 <script src="<?php echo base_url('js/date_picker.js')?>"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="<?php echo base_url('js/jquery2.min.js')?>"></script>
+<script src="<?php echo base_url('js/jquery-ui2.min.js')?>"></script>
+
+<script src="<?php echo base_url('js/jquery.timepicker.js')?>"></script>
+<script src="<?php echo base_url('js/jquery.timepicker.min.js')?>"></script> 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script> -->
 
 
 <script type="text/javascript">
@@ -75,8 +84,29 @@
 
     $(function() {
         $('#enddate').datepicker({ dateFormat: 'yy-mm-dd' }).val();
+   
     });
+
+    $(document).ready(function(){
+        $('#starttime').timepicker();
+        $('#starttime').on('click', function(){
+            $('#spanExample').timepicker('show');
+        });
+    });
+
+    $(document).ready(function(){
+        $('#endtime').timepicker();
+        $('#endtime').on('click', function(){
+            $('#spanExample').timepicker('show');
+        });
+    });
+
+    // $(function() {
+    //      $('#starttime').timepicker({});
+    // });
+
 </script>
+
 <div class="page-wrapper">
     <div class="left-wrapper">
         <?php echo user_menu('dashboard');?>
@@ -169,7 +199,7 @@
 
                 <div class="form-group col-md-2">
                     <label for="start_time">Start Time</label>
-                    <input type="text" class="form-control" name="start_time"  id="" placeholder="hh/mm"required=""><br>
+                    <input type="text" class="form-control" name="start_time"  id="starttime" placeholder="hh/mm"required=""><br>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="end_date">End Date</label>
@@ -177,7 +207,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="end_time">End Time</label>
-                    <input type="text" class="form-control" name="end_time"  placeholder="hh/mm"required=""><br>
+                    <input type="text" class="form-control" name="end_time" id="endtime" placeholder="hh/mm"required=""><br>
                 </div>
 
                 <div class="form-group col-md-2">
