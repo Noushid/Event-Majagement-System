@@ -158,7 +158,7 @@ class Dashboard extends Check_Logged
             // var_dump($data);
 
             $this->load->library('table');
-            $this->table->set_heading('Name',  'starting date', 'ending date', 'peoples', 'Estimated coast' ,anchor(base_url(uri_string().'/add'),'make booking',['class' => 'button button-normal']));
+            $this->table->set_heading('Name',  'starting date', 'ending date', 'peoples', 'Estimated coast');
             if(!empty($data))
             {
                 foreach ($data['all'] as $key => $value)

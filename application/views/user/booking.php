@@ -69,7 +69,8 @@
 
 <script type="text/javascript">
     $(function() {
-        $( "#startdate" ).datepicker();
+        // $( "#startdate" ).datepicker();
+        $('#startdate').datepicker({ dateFormat: 'mm-dd-yy' }).val();
     });
 
     $(function() {
