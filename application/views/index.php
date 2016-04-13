@@ -17,7 +17,7 @@
 <script src="<?php echo base_url('js/jquery.mobilemenu.js') ?>"></script>
 <script src="<?php echo base_url('js/tmStickUp.js') ?>></script>
 <script src="<?php echo base_url('js/jquery.ui.totop.js') ?>"></script>
-<script src="<?php echo base_url('js/touchTouch.jquery.js') ?>></script>
+<script src="<?php echo base_url('js/touchTouch.jquery.js') ?>"> </script>
 <script src="<?php echo base_url('js/jquery.shuffle-images.js') ?>"></script>
 
 <script>

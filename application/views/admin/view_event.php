@@ -39,9 +39,9 @@
     </nav>
 
 	<div>	
-	<?php if(isset($data))
+	<?php if(isset($event))
 	{
-		echo $data;
+		echo $event;
 		}
         if (isset($message)) {
         echo $message;

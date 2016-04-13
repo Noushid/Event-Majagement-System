@@ -136,6 +136,9 @@ $route['dashboard/booking/add'] = 'Booking_Controller';
 $route['dashboard/booking/delete/(:any)'] ='Booking_Controller/delete/$1'; 
 $route['dashboard/booking'] = 'Booking_Controller/view_booking';
 
+// events
+$route['dashboard/event'] = 'Dashboard/view_events';
+
 
 /*admin*/
 

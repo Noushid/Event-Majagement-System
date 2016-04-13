@@ -417,7 +417,7 @@ class Client_Controller extends Check_Logged
 
 		$data =$this->Client_Model->view();
 		$this->load->library('table');
- 		$this->table->set_heading('Name', 'Address','Phone No','Place', 'Bank Name','A/c No','Amount','','');
+ 		$this->table->set_heading('Name', 'Address','Phone No','Place', 'Bank Name','Amount','','');
  		if(!empty($data))
  		{
 	 		foreach ($data as $key => $value)
@@ -429,7 +429,7 @@ class Client_Controller extends Check_Logged
 						 				$value->phoneno,
 						 				$value->place,
 						 				$value->bank_name,
-						 				$value->acno,
+						 				// $value->a/cno,
 						 				$value->amount,
 						 				'<a href="'. base_url('dashboard/client/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
 	 								);

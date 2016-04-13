@@ -13,7 +13,8 @@ class Event_Model extends My_Model
         'events.start_date',
         'events.end_date',
         'events.noof_people',
-        'venues.id as venue_id'
+        'venues.id as venue_id',
+        'venues.name as venue_name'
     ];
 	
 	function __construct()
